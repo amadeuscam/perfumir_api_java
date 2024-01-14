@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class SignInRequest {
-    private String email;
-    private String password;
+public class OlfactiveFamiliesDto {
+    private Long id;
+    private String name;
 }

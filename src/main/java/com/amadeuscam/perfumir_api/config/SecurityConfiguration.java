@@ -33,6 +33,7 @@ public class SecurityConfiguration {
                         .permitAll()
                         .requestMatchers("/api/v1/admin").hasAnyAuthority(Role.ADMIN.name())
                         .requestMatchers("/api/v1/user").hasAnyAuthority(Role.USER.name())
+                        .requestMatchers("/api/v1/ingredient").hasAnyAuthority(Role.USER.name())
                         .anyRequest().authenticated()
 
                 )

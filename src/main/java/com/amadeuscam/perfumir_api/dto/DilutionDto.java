@@ -1,5 +1,6 @@
 package com.amadeuscam.perfumir_api.dto;
 
+import com.amadeuscam.perfumir_api.entities.Ingredient;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class SignInRequest {
-    private String email;
-    private String password;
+public class DilutionDto {
+    private Long id;
+    private Integer quantity;
 }
