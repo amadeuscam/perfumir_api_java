@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -26,10 +27,11 @@ public class Ingredient {
     private String type;
     public Integer odorImpact;
     public Integer odorLife;
-    @OneToMany(mappedBy = "ingredient", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private Set<Dilution> dilutions;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<Dilution> dilutions = new HashSet<>();
 
-    @OneToMany(mappedBy = "ingredient", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private Set<OlfactiveFamilies> olfactiveFamilies;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<OlfactiveFamilies> olfactiveFamilies = new HashSet<>();
+
 }
 

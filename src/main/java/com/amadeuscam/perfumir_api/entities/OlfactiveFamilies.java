@@ -18,7 +18,7 @@ public class OlfactiveFamilies {
     private Long id;
     private String name;
 
-    @ManyToOne
-    @JoinColumn(name = "ingredient_id")
-    private Ingredient ingredient;
+//    @ManyToOne
+//    @JoinColumn(name = "ingredient_id")
+//    private Ingredient ingredient;
 }
