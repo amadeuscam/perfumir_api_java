@@ -23,7 +23,7 @@ public class IngredientController {
 
     private final IngredientService ingredientService;
     private final Maper<Ingredient, IngredientDto> ingredientMaper;
-    private final IngredientRepository ingredientRepository;
+
 
     @PostMapping
     public ResponseEntity<IngredientDto> createIngredient(@RequestBody IngredientDto ingredientDto) {
@@ -68,7 +68,7 @@ public class IngredientController {
     }
 
     @DeleteMapping(path = "/{id}")
-    @Secured("ADMIN")
+//    @Secured("ADMIN")
     public ResponseEntity deleteIngredient(@PathVariable("id") Long id) {
         if (!ingredientService.isExists(id)) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

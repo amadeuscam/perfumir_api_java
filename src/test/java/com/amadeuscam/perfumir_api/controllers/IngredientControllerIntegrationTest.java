@@ -141,4 +141,73 @@ public class IngredientControllerIntegrationTest {
 
         ).andExpect(MockMvcResultMatchers.status().isNotFound());
     }
+
+    @Test
+    @WithMockUser(username = "test@test.es")
+    public void testThatGetAuthorWhenExists() throws Exception {
+        Ingredient ingredient = TestDataUtil.createTestIngredient(1L, null, null);
+        ingredientService.createIngredient(ingredient);
+
+        mockMvc.perform(
+                MockMvcRequestBuilders.get("/api/v1/ingredients/1")
+                        .contentType(MediaType.APPLICATION_JSON)
+
+        ).andExpect(
+                MockMvcResultMatchers.jsonPath("$.id").isNumber()
+        ).andExpect(
+                MockMvcResultMatchers.jsonPath("$.name").value("Ambroxan")
+        ).andExpect(
+                MockMvcResultMatchers.jsonPath("$.casNumber").value("3738-00-9")
+        );
+    }
+
+    @Test
+    @WithMockUser(username = "test@test.es")
+    public void testThatPartialUpdateIngredientAndReturnedUpdated() throws Exception {
+
+        Ingredient ingredient = TestDataUtil.createTestIngredient(1L, null, null);
+        ingredientService.createIngredient(ingredient);
+
+        Ingredient testIngredient = TestDataUtil.createTestIngredient(1L, null, null);
+        testIngredient.setName("Updated");
+        final String json = objectMapper.writeValueAsString(testIngredient);
+
+        mockMvc.perform(
+                MockMvcRequestBuilders.patch("/api/v1/ingredients")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(json)
+
+        ).andExpect(
+                MockMvcResultMatchers.jsonPath("$.id").value(ingredient.getId())
+        ).andExpect(
+                MockMvcResultMatchers.jsonPath("$.name").value("Updated")
+        ).andExpect(
+                MockMvcResultMatchers.jsonPath("$.casNumber").value(testIngredient.getCasNumber())
+        );
+    }
+
+    @Test
+    @WithMockUser(username = "test@test.es", authorities = {"ADMIN"})
+    public void testThatDeleteIngredientAndReturn204Status() throws Exception {
+        Ingredient ingredient = TestDataUtil.createTestIngredient(1L, null, null);
+        ingredientService.createIngredient(ingredient);
+
+        mockMvc.perform(
+                MockMvcRequestBuilders.delete("/api/v1/ingredients/1")
+                        .contentType(MediaType.APPLICATION_JSON)
+
+        ).andExpect(MockMvcResultMatchers.status().isNoContent());
+    }
+    @Test
+    @WithMockUser(username = "test@test.es", authorities = {"USER"})
+    public void testThatDeleteIngredientAndReturn403Status() throws Exception {
+        Ingredient ingredient = TestDataUtil.createTestIngredient(1L, null, null);
+        ingredientService.createIngredient(ingredient);
+
+        mockMvc.perform(
+                MockMvcRequestBuilders.delete("/api/v1/ingredients/1")
+                        .contentType(MediaType.APPLICATION_JSON)
+
+        ).andExpect(MockMvcResultMatchers.status().is(403));
+    }
 }

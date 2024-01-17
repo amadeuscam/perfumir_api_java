@@ -1,24 +1,25 @@
 package com.amadeuscam.perfumir_api.services.impl;
 
+import com.amadeuscam.perfumir_api.entities.Dilution;
 import com.amadeuscam.perfumir_api.entities.Ingredient;
+import com.amadeuscam.perfumir_api.repository.DilutionRepository;
 import com.amadeuscam.perfumir_api.repository.IngredientRepository;
 import com.amadeuscam.perfumir_api.services.IngredientService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 @Service
 @RequiredArgsConstructor
-@Transactional
 public class IngredientServiceImpl implements IngredientService {
-
+    @Autowired
     private final IngredientRepository ingredientRepository;
+    private final DilutionRepository dilutionRepository;
 
 
     @Override

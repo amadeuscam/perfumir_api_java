@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class DilutionMapper implements Maper<Dilution, DilutionDto> {
 
-    private ModelMapper modelMapper;
+    private final ModelMapper modelMapper;
 
     @Override
     public DilutionDto mapTo(Dilution dilution) {
