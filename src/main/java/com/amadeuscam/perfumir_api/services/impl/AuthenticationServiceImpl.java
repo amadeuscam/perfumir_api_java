@@ -16,6 +16,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 @Service
 @RequiredArgsConstructor
@@ -27,13 +28,13 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
     public User signup(SignUpRequest signUpRequest) {
         User user = new User();
-
         user.setEmail(signUpRequest.getEmail());
         user.setFirstname(signUpRequest.getFirstName());
         user.setSecondname(signUpRequest.getLastName());
-        user.setRole(Role.USER);
+        user.setRole((Objects.equals(signUpRequest.getRole(), "user")) ? Role.USER : Role.ADMIN);
         user.setPassword(passwordEncoder.encode(signUpRequest.getPassword()));
         return userRepository.save(user);
+
     }
 
     public JwtAuthenticationResponse signin(SignInRequest signInRequest) {

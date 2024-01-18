@@ -45,7 +45,7 @@ public class IngredientControllerIntegrationTest {
 
 
     @Test
-    @WithMockUser(username = "test@test.es")
+    @WithMockUser(username = "teste@test.es", authorities = {"USER"})
     public void testThatCanCreateIngredientWith201Created() throws Exception {
         Set<Dilution> dilutions = new HashSet<>();
         Set<OlfactiveFamilies> olfactiveFamilies = new HashSet<>();
@@ -63,7 +63,7 @@ public class IngredientControllerIntegrationTest {
     }
 
     @Test
-    @WithMockUser(username = "test@test.es")
+    @WithMockUser(username = "test@test.es", authorities = {"USER"})
     public void testThatCreateIngredientWithSavedIngredient() throws Exception {
         Set<Dilution> dilutions = new HashSet<>();
         Set<OlfactiveFamilies> olfactiveFamilies = new HashSet<>();
@@ -87,7 +87,7 @@ public class IngredientControllerIntegrationTest {
     }
 
     @Test
-    @WithMockUser(username = "test@test.es")
+    @WithMockUser(username = "test@test.es", authorities = {"USER"})
     public void testThatListOfIngredientsReturnsStaus200() throws Exception {
 
         mockMvc.perform(
@@ -98,7 +98,7 @@ public class IngredientControllerIntegrationTest {
     }
 
     @Test
-    @WithMockUser(username = "test@test.es")
+    @WithMockUser(username = "test@test.es", authorities = {"USER"})
     public void testThatReturnsListOfIngredient() throws Exception {
         Ingredient ingredient = TestDataUtil.createTestIngredient(1L, null, null);
         ingredientService.createIngredient(ingredient);
@@ -117,7 +117,7 @@ public class IngredientControllerIntegrationTest {
     }
 
     @Test
-    @WithMockUser(username = "test@test.es")
+    @WithMockUser(username = "test@test.es", authorities = {"USER"})
     public void testThatReturn200StatusCodeWhenIngredientFound() throws Exception {
         Ingredient ingredient = TestDataUtil.createTestIngredient(1L, null, null);
         ingredientService.createIngredient(ingredient);
@@ -130,7 +130,7 @@ public class IngredientControllerIntegrationTest {
     }
 
     @Test
-    @WithMockUser(username = "test@test.es")
+    @WithMockUser(username = "test@test.es", authorities = {"USER"})
     public void testThatReturn404StatusCodeWhenIngredientNotFound() throws Exception {
         Ingredient ingredient = TestDataUtil.createTestIngredient(1L, null, null);
         ingredientService.createIngredient(ingredient);
@@ -143,7 +143,7 @@ public class IngredientControllerIntegrationTest {
     }
 
     @Test
-    @WithMockUser(username = "test@test.es")
+    @WithMockUser(username = "test@test.es", authorities = {"USER"})
     public void testThatGetAuthorWhenExists() throws Exception {
         Ingredient ingredient = TestDataUtil.createTestIngredient(1L, null, null);
         ingredientService.createIngredient(ingredient);
@@ -162,7 +162,7 @@ public class IngredientControllerIntegrationTest {
     }
 
     @Test
-    @WithMockUser(username = "test@test.es")
+    @WithMockUser(username = "test@test.es", authorities = {"USER"})
     public void testThatPartialUpdateIngredientAndReturnedUpdated() throws Exception {
 
         Ingredient ingredient = TestDataUtil.createTestIngredient(1L, null, null);
@@ -198,6 +198,7 @@ public class IngredientControllerIntegrationTest {
 
         ).andExpect(MockMvcResultMatchers.status().isNoContent());
     }
+
     @Test
     @WithMockUser(username = "test@test.es", authorities = {"USER"})
     public void testThatDeleteIngredientAndReturn403Status() throws Exception {

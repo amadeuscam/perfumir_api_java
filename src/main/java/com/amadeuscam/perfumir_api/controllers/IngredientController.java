@@ -68,7 +68,7 @@ public class IngredientController {
     }
 
     @DeleteMapping(path = "/{id}")
-//    @Secured("ADMIN")
+    @Secured("ADMIN")
     public ResponseEntity deleteIngredient(@PathVariable("id") Long id) {
         if (!ingredientService.isExists(id)) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

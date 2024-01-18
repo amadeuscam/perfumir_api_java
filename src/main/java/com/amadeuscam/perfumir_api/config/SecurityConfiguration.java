@@ -21,7 +21,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
-@EnableMethodSecurity(securedEnabled = true, prePostEnabled = true)
+@EnableMethodSecurity(securedEnabled = true)
 @RequiredArgsConstructor
 public class SecurityConfiguration {
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
@@ -30,18 +30,19 @@ public class SecurityConfiguration {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
-        http.csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(request ->
+        http.authorizeHttpRequests(request ->
                         request.requestMatchers("/api/auth/**").permitAll()
+
                         .requestMatchers("/v3/api-docs/**").permitAll()
                         .requestMatchers("/swagger-ui/**").permitAll()
                         .requestMatchers("/api/v1/admin").hasAnyAuthority(Role.ADMIN.name())
-                        .requestMatchers("/api/v1/**").hasAnyAuthority(Role.USER.name())
-//                        .requestMatchers("/api/v1/ingredient").hasAnyAuthority(Role.USER.name())
-//                        .requestMatchers("/api/v1/dilutions").hasAnyAuthority(Role.USER.name())
+                        .requestMatchers("/api/v1/user").hasAnyAuthority(Role.USER.name())
+                        .requestMatchers("/api/v1/ingredient").hasAnyAuthority(Role.USER.name())
+                        .requestMatchers("/api/v1/dilutions").hasAnyAuthority(Role.USER.name())
                         .anyRequest().authenticated()
 
                 )
+                .csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement(manager -> manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider()).addFilterBefore(
                         jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class
