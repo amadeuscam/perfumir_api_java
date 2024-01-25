@@ -17,6 +17,7 @@ import java.util.Set;
 public class Ingredient {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "ingredient_id")
     private Long id;
     private String name;
     private String casNumber;
@@ -25,11 +26,12 @@ public class Ingredient {
     private String type;
     public Integer odorImpact;
     public Integer odorLife;
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "ingredient", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Dilution> dilutions;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "ingredient", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<OlfactiveFamilies> olfactiveFamilies;
+
 
 }
 

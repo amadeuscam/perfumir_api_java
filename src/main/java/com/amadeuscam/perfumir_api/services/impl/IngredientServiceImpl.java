@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
 @Service
@@ -24,8 +25,25 @@ public class IngredientServiceImpl implements IngredientService {
 
     @Override
     public Ingredient createIngredient(Ingredient ingredient) {
-        return ingredientRepository.save(ingredient);
+        Ingredient ingredientToBeSaved = ingredient;
+        if (!(ingredient.getDilutions() == null) && !ingredient.getDilutions().isEmpty()) {
+            ingredient.getDilutions().forEach(d -> d.setIngredient(ingredientToBeSaved));
+        }
+        return ingredientRepository.save(ingredientToBeSaved);
     }
+
+    @Override
+    public Ingredient updateIngredient(Ingredient ingredient) {
+        Ingredient ingredientToBeUpdated = ingredient;
+        if (!(ingredient.getDilutions() == null) && !ingredient.getDilutions().isEmpty()) {
+            ingredient.getDilutions().forEach(d -> d.setIngredient(ingredientToBeUpdated));
+        }
+
+        return ingredientRepository.save(ingredientToBeUpdated);
+
+
+    }
+
 
     @Override
     public Ingredient partialUpdate(Ingredient ingredient) {

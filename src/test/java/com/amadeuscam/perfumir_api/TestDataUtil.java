@@ -43,9 +43,9 @@ public class TestDataUtil {
                 .build();
     }
 
-    public static Dilution createDilution() {
+    public static Dilution createDilution(Long id) {
         return Dilution.builder()
-                .id(1L)
+                .id(id)
                 .quantity(10)
                 .build();
     }

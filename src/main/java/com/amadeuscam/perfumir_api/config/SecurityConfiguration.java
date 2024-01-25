@@ -30,19 +30,24 @@ public class SecurityConfiguration {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
-        http.authorizeHttpRequests(request ->
-                        request.requestMatchers("/api/auth/**").permitAll()
+        http
+                .csrf(AbstractHttpConfigurer::disable)
+                .authorizeHttpRequests(request ->
+                                request.requestMatchers(
+                                                "/api/auth/**",
+                                                "/error",
+                                                "/v3/api-docs/**",
+                                                "/swagger-ui/**"
+                                        ).permitAll()
 
-                        .requestMatchers("/v3/api-docs/**").permitAll()
-                        .requestMatchers("/swagger-ui/**").permitAll()
-                        .requestMatchers("/api/v1/admin").hasAnyAuthority(Role.ADMIN.name())
-                        .requestMatchers("/api/v1/user").hasAnyAuthority(Role.USER.name())
-                        .requestMatchers("/api/v1/ingredient").hasAnyAuthority(Role.USER.name())
-                        .requestMatchers("/api/v1/dilutions").hasAnyAuthority(Role.USER.name())
-                        .anyRequest().authenticated()
+
+//                        .requestMatchers("/api/v1/admin").hasAnyAuthority(Role.ADMIN.name())
+//                        .requestMatchers("/api/v1/user").hasAnyAuthority(Role.USER.name())
+//                        .requestMatchers("/api/v1/ingredient").hasAnyAuthority(Role.USER.name())
+//                        .requestMatchers("/api/v1/dilutions").hasAnyAuthority(Role.USER.name())
+                                        .anyRequest().authenticated()
 
                 )
-                .csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement(manager -> manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider()).addFilterBefore(
                         jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class

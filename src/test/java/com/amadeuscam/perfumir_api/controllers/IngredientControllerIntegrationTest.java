@@ -29,8 +29,8 @@ import java.util.Set;
 @AutoConfigureMockMvc
 public class IngredientControllerIntegrationTest {
 
-    private IngredientService ingredientService;
-    private MockMvc mockMvc;
+    private final IngredientService ingredientService;
+    private final MockMvc mockMvc;
     private ObjectMapper objectMapper;
 
     @Autowired
@@ -167,8 +167,11 @@ public class IngredientControllerIntegrationTest {
 
         Ingredient ingredient = TestDataUtil.createTestIngredient(1L, null, null);
         ingredientService.createIngredient(ingredient);
+        Set<Dilution> dilutions = new HashSet<>();
+        Set<OlfactiveFamilies> olfactiveFamilies = new HashSet<>();
 
-        Ingredient testIngredient = TestDataUtil.createTestIngredient(1L, null, null);
+        Ingredient testIngredient = TestDataUtil.createTestIngredient(1L, dilutions, olfactiveFamilies);
+
         testIngredient.setName("Updated");
         final String json = objectMapper.writeValueAsString(testIngredient);
 

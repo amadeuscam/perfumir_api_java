@@ -8,6 +8,7 @@ import java.util.Optional;
 public interface IngredientService {
 
     Ingredient createIngredient(Ingredient ingredient);
+    Ingredient updateIngredient(Ingredient ingredient);
     Ingredient partialUpdate(Ingredient ingredient);
     Optional<Ingredient> getIngredient(Long id);
     List<Ingredient> findAll();

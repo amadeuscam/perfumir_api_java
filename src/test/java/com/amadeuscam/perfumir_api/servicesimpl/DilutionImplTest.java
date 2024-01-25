@@ -33,7 +33,7 @@ public class DilutionImplTest {
 
     @BeforeEach
     void setUp() {
-        dilution = TestDataUtil.createDilution();
+        dilution = TestDataUtil.createDilution(1L);
     }
 
     @Test
@@ -48,7 +48,7 @@ public class DilutionImplTest {
     @Test
     public void testThatGetAllDilutions() {
         // given - precondition or setup
-        final Dilution dilution1 = TestDataUtil.createDilution();
+        final Dilution dilution1 = TestDataUtil.createDilution(1L);
         given(dilutionRepository.findAll()).willReturn(List.of(dilution, dilution1));
         // when -  action or the behaviour that we are going test
         final List<Dilution> dilutions = dilutionService.getDilutions();
@@ -60,7 +60,7 @@ public class DilutionImplTest {
     @Test
     public void testThatGetAllDilutionsThenReturnEmptyDilutionsList() {
         // given - precondition or setup
-        final Dilution dilution1 = TestDataUtil.createDilution();
+        final Dilution dilution1 = TestDataUtil.createDilution(1L);
         given(dilutionRepository.findAll()).willReturn(Collections.emptyList());
         // when -  action or the behaviour that we are going test
         final List<Dilution> dilutions = dilutionService.getDilutions();
@@ -69,7 +69,7 @@ public class DilutionImplTest {
     }
 
     @Test
-    public void testThatGetDIlutionById() {
+    public void testThatGetDilutionById() {
         given(dilutionRepository.findById(1L)).willReturn(Optional.of(dilution));
         final Dilution saveddilution = dilutionService.getDilution(dilution.getId()).get();
         assertThat(saveddilution).isNotNull();
@@ -82,6 +82,5 @@ public class DilutionImplTest {
         final Dilution updateDilution = dilutionService.updateDilution(dilution);
         assertThat(updateDilution.getQuantity()).isEqualTo(30);
     }
-
 
 }

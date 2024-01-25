@@ -17,4 +17,8 @@ public class Dilution {
     private Long id;
     private Integer quantity;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="ingredient_id")
+    private Ingredient ingredient;
+
 }

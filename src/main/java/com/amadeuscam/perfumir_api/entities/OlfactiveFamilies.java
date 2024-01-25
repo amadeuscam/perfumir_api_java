@@ -16,4 +16,8 @@ public class OlfactiveFamilies {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="ingredient_id")
+    private Ingredient ingredient;
 }

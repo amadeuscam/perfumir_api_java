@@ -38,7 +38,7 @@ public class IngredientImplTest {
 
     @Test
     public void testThatIngredientIsSavedWithDilution() {
-        final Dilution dilution = TestDataUtil.createDilution();
+        final Dilution dilution = TestDataUtil.createDilution(1L);
         final Ingredient ingredient = TestDataUtil.createTestIngredient(1L, null, null);
         ingredient.setDilutions(Set.of(dilution));
         when(ingredientRepository.save(eq(ingredient))).thenReturn(ingredient);
@@ -50,7 +50,7 @@ public class IngredientImplTest {
 
     @Test
     public void testThatIngredientIsSavedWithDilutionAndOlfactiveFamilies() {
-        final Dilution dilution = TestDataUtil.createDilution();
+        final Dilution dilution = TestDataUtil.createDilution(1L);
         final OlfactiveFamilies olfactiveFamilies = TestDataUtil.createOlfactiveFamilies("Marine");
 
         final Ingredient ingredient = TestDataUtil.createTestIngredient(1L, null, null);

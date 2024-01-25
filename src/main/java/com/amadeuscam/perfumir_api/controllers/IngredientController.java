@@ -53,7 +53,7 @@ public class IngredientController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         final Ingredient ingredient = ingredientMaper.mapFrom(ingredientDto);
-        final Ingredient ingredientRecord = ingredientService.createIngredient(ingredient);
+        final Ingredient ingredientRecord = ingredientService.updateIngredient(ingredient);
         return new ResponseEntity<>(ingredientMaper.mapTo(ingredientRecord), HttpStatus.OK);
     }
 

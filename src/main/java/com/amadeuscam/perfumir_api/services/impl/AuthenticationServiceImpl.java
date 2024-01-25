@@ -10,10 +10,15 @@ import com.amadeuscam.perfumir_api.repository.UserRepository;
 import com.amadeuscam.perfumir_api.services.AuthenticationService;
 import com.amadeuscam.perfumir_api.services.JWTService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
+
 
 import java.util.HashMap;
 import java.util.Objects;
@@ -38,20 +43,32 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     }
 
     public JwtAuthenticationResponse signin(SignInRequest signInRequest) {
-        authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(signInRequest.getEmail(), signInRequest.getPassword())
-        );
-        var user = userRepository.findByEmail(
-                        signInRequest.getEmail())
-                .orElseThrow(() -> new IllegalArgumentException("Invalid email or pasword"));
 
-        var jwt = jwtService.generateToken(user);
-        var refreshToken = jwtService.generateRefreshToken(new HashMap<>(), user);
 
-        JwtAuthenticationResponse jwtAuthenticationResponse = new JwtAuthenticationResponse();
-        jwtAuthenticationResponse.setRefreshToken(refreshToken);
-        jwtAuthenticationResponse.setToken(jwt);
-        return jwtAuthenticationResponse;
+        try {
+            if (signInRequest.getEmail() == null || signInRequest.getPassword() == null) {
+                throw new IllegalArgumentException("Email and password can't be null");
+            }
+
+            authenticationManager.authenticate(
+                    new UsernamePasswordAuthenticationToken(signInRequest.getEmail(), signInRequest.getPassword())
+            );
+            var user = userRepository.findByEmail(
+                            signInRequest.getEmail())
+                    .orElseThrow(() -> new IllegalArgumentException("Invalid email or pasword"));
+
+            var jwt = jwtService.generateToken(user);
+            var refreshToken = jwtService.generateRefreshToken(new HashMap<>(), user);
+
+            JwtAuthenticationResponse jwtAuthenticationResponse = new JwtAuthenticationResponse();
+            jwtAuthenticationResponse.setRefreshToken(refreshToken);
+            jwtAuthenticationResponse.setToken(jwt);
+            return jwtAuthenticationResponse;
+        } catch (Exception exception) {
+            throw new ResponseStatusException(
+                    HttpStatus.BAD_REQUEST, exception.getMessage());
+        }
+
     }
 
     public JwtAuthenticationResponse refreshToken(RefreshTokenRequest refreshTokenRequest) {
