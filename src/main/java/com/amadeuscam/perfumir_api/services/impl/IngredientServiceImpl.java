@@ -20,7 +20,6 @@ import java.util.stream.StreamSupport;
 public class IngredientServiceImpl implements IngredientService {
     @Autowired
     private final IngredientRepository ingredientRepository;
-    private final DilutionRepository dilutionRepository;
 
 
     @Override
@@ -28,6 +27,10 @@ public class IngredientServiceImpl implements IngredientService {
         Ingredient ingredientToBeSaved = ingredient;
         if (!(ingredient.getDilutions() == null) && !ingredient.getDilutions().isEmpty()) {
             ingredient.getDilutions().forEach(d -> d.setIngredient(ingredientToBeSaved));
+        }
+
+        if (!(ingredient.getOlfactiveFamilies() == null) && !ingredient.getOlfactiveFamilies().isEmpty()) {
+            ingredient.getOlfactiveFamilies().forEach(d -> d.setIngredient(ingredientToBeSaved));
         }
         return ingredientRepository.save(ingredientToBeSaved);
     }
@@ -37,6 +40,10 @@ public class IngredientServiceImpl implements IngredientService {
         Ingredient ingredientToBeUpdated = ingredient;
         if (!(ingredient.getDilutions() == null) && !ingredient.getDilutions().isEmpty()) {
             ingredient.getDilutions().forEach(d -> d.setIngredient(ingredientToBeUpdated));
+        }
+
+        if (!(ingredient.getOlfactiveFamilies() == null) && !ingredient.getOlfactiveFamilies().isEmpty()) {
+            ingredient.getOlfactiveFamilies().forEach(d -> d.setIngredient(ingredientToBeUpdated));
         }
 
         return ingredientRepository.save(ingredientToBeUpdated);

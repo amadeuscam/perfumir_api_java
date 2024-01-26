@@ -1,5 +1,6 @@
 package com.amadeuscam.perfumir_api.services;
 
+import com.amadeuscam.perfumir_api.dto.DilutionCountDto;
 import com.amadeuscam.perfumir_api.entities.Dilution;
 
 import java.util.List;
@@ -14,6 +15,7 @@ public interface DilutionService {
     Optional<Dilution> getDilution(Long id);
 
     List<Dilution> getDilutions();
+    List<DilutionCountDto> getDilutionsQuantities();
 
     boolean isDilutionExists(Long id);
 

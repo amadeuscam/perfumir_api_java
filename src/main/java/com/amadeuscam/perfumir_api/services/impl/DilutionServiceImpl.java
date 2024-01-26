@@ -1,9 +1,8 @@
 package com.amadeuscam.perfumir_api.services.impl;
 
+import com.amadeuscam.perfumir_api.dto.DilutionCountDto;
 import com.amadeuscam.perfumir_api.entities.Dilution;
-import com.amadeuscam.perfumir_api.entities.Ingredient;
 import com.amadeuscam.perfumir_api.repository.DilutionRepository;
-import com.amadeuscam.perfumir_api.repository.IngredientRepository;
 import com.amadeuscam.perfumir_api.services.DilutionService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -40,6 +39,11 @@ public class DilutionServiceImpl implements DilutionService {
     public List<Dilution> getDilutions() {
         return StreamSupport.stream(dilutionRepository.findAll().spliterator(), false)
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<DilutionCountDto> getDilutionsQuantities() {
+        return dilutionRepository.getCountByQuantity();
     }
 
 

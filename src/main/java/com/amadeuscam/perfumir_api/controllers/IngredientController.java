@@ -6,10 +6,12 @@ import com.amadeuscam.perfumir_api.mappers.Maper;
 import com.amadeuscam.perfumir_api.repository.IngredientRepository;
 import com.amadeuscam.perfumir_api.services.IngredientService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.annotation.Secured;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,7 +28,7 @@ public class IngredientController {
 
 
     @PostMapping
-    public ResponseEntity<IngredientDto> createIngredient(@RequestBody IngredientDto ingredientDto) {
+    public ResponseEntity<IngredientDto> createIngredient(@Validated @RequestBody IngredientDto ingredientDto) {
         final Ingredient ingredient = ingredientMaper.mapFrom(ingredientDto);
         final Ingredient savedIngredient = ingredientService.createIngredient(ingredient);
         return new ResponseEntity<>(ingredientMaper.mapTo(savedIngredient), HttpStatus.CREATED);

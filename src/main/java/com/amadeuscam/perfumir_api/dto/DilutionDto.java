@@ -1,6 +1,7 @@
 package com.amadeuscam.perfumir_api.dto;
 
 import com.amadeuscam.perfumir_api.entities.Ingredient;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,5 +13,6 @@ import lombok.NoArgsConstructor;
 @Builder
 public class DilutionDto {
     private Long id;
+    @NotBlank(message = "The street name is required.")
     private Integer quantity;
 }
