@@ -19,7 +19,9 @@ public class Ingredient {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ingredient_id")
     private Long id;
+    @Column(unique=true)
     private String name;
+    @Column(unique=true)
     private String casNumber;
     private String pyramidLevel;
     private String odorDescription;

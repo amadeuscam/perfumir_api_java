@@ -4,6 +4,7 @@ import com.amadeuscam.perfumir_api.dto.OlfactiveFamiliesDto;
 import com.amadeuscam.perfumir_api.entities.OlfactiveFamilies;
 import com.amadeuscam.perfumir_api.enums.OlfativeFamily;
 import com.amadeuscam.perfumir_api.mappers.Maper;
+import com.amadeuscam.perfumir_api.mappers.impl.OlfactiveFamiliesMapper;
 import com.amadeuscam.perfumir_api.services.OlfativeFamiliesService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -24,13 +25,13 @@ import java.util.stream.Collectors;
 public class OlfativeFamiliesController {
 
     private final OlfativeFamiliesService olfativeFamiliesService;
-    private final Maper<OlfactiveFamilies, OlfactiveFamiliesDto> olfactiveFamiliesDtoMaper;
+    private final OlfactiveFamiliesMapper olfactiveFamiliesMapper;
 
 
     @GetMapping(path = "/{id}")
     public ResponseEntity<Set<OlfactiveFamiliesDto>> getOlfativeFamilies(@PathVariable("id") Long id) {
         final Set<OlfactiveFamilies> olfactiveFamiliess = olfativeFamiliesService.getOlfactiveFamiliess(id);
-        final Set<OlfactiveFamiliesDto> collect = olfactiveFamiliess.stream().map(olfactiveFamiliesDtoMaper::mapTo).collect(Collectors.toSet());
+        final Set<OlfactiveFamiliesDto> collect = olfactiveFamiliess.stream().map(olfactiveFamiliesMapper::mapTo).collect(Collectors.toSet());
         return new ResponseEntity<>(collect, HttpStatus.OK);
     }
 
