@@ -3,6 +3,7 @@ package com.amadeuscam.perfumir_api.repositories;
 import com.amadeuscam.perfumir_api.TestDataUtil;
 import com.amadeuscam.perfumir_api.entities.Dilution;
 import com.amadeuscam.perfumir_api.entities.Ingredient;
+import com.amadeuscam.perfumir_api.entities.OlfactiveFamilies;
 import com.amadeuscam.perfumir_api.repository.DilutionRepository;
 import com.amadeuscam.perfumir_api.services.IngredientService;
 import org.junit.jupiter.api.Test;
@@ -14,6 +15,7 @@ import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 
@@ -61,12 +63,13 @@ public class DilutionRepositoryIntegrationTest {
     public void testThatDilutionIsDeletedWhenUpdateIngredient() {
         final Dilution dilution = TestDataUtil.createDilution(1L);
         Set<Dilution> dilutions = new HashSet<>();
+        Set<OlfactiveFamilies> olfactiveFamilies = new HashSet<>();
         dilutions.add(dilution);
-        Ingredient ingredient = TestDataUtil.createTestIngredient(1L, null, null);
-        ingredient.setDilutions(dilutions);
-        ingredientService.createIngredient(ingredient);
-        dilutions.clear();
-        final Ingredient serviceIngredient = ingredientService.updateIngredient(ingredient);
+        Ingredient ingredient = TestDataUtil.createTestIngredient(1L, dilutions,olfactiveFamilies);
+        final Ingredient serviceIngredient1 = ingredientService.createIngredient(ingredient);
+        serviceIngredient1.getDilutions().removeIf(dilution1 -> Objects.equals(dilution1.getId(), dilution.getId()));
+
+        final Ingredient serviceIngredient = ingredientService.updateIngredient(serviceIngredient1);
         assertThat(serviceIngredient.getDilutions().size()).isEqualTo(0);
     }
 
