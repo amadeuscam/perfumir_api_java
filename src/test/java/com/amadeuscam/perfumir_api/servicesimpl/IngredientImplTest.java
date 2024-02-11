@@ -6,6 +6,7 @@ import com.amadeuscam.perfumir_api.entities.Ingredient;
 import com.amadeuscam.perfumir_api.entities.OlfactiveFamilies;
 import com.amadeuscam.perfumir_api.repository.IngredientRepository;
 import com.amadeuscam.perfumir_api.services.impl.IngredientServiceImpl;
+import com.amadeuscam.perfumir_api.services.impl.OlfativeFamiliesServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -14,6 +15,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.test.annotation.DirtiesContext;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,6 +29,9 @@ public class IngredientImplTest {
     private IngredientRepository ingredientRepository;
     @InjectMocks
     private IngredientServiceImpl underTest;
+
+    @Mock
+    private OlfativeFamiliesServiceImpl olfativeFamiliesService;
 
     @Test
     public void testThatIngredientIsSaved() {
@@ -51,7 +56,7 @@ public class IngredientImplTest {
     @Test
     public void testThatIngredientIsSavedWithDilutionAndOlfactiveFamilies() {
         final Dilution dilution = TestDataUtil.createDilution(1L);
-        final OlfactiveFamilies olfactiveFamilies = TestDataUtil.createOlfactiveFamilies("Marine");
+        final OlfactiveFamilies olfactiveFamilies = TestDataUtil.createOlfactiveFamilies(1L, "Marine");
 
         final Ingredient ingredient = TestDataUtil.createTestIngredient(1L, null, null);
         ingredient.setDilutions(Set.of(dilution));
@@ -63,5 +68,4 @@ public class IngredientImplTest {
         assertEquals(ingredient.getOlfactiveFamilies().size(), 1);
 
     }
-
 }

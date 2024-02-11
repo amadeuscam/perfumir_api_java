@@ -11,6 +11,7 @@ import lombok.*;
 @Setter
 @Getter
 @Table(name = "dilutions")
+@ToString
 public class Dilution {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -36,7 +36,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         user.setEmail(signUpRequest.getEmail());
         user.setFirstname(signUpRequest.getFirstName());
         user.setSecondname(signUpRequest.getLastName());
-        user.setRole((Objects.equals(signUpRequest.getRole(), "user")) ? Role.USER : Role.ADMIN);
+        user.setRole((Objects.equals(signUpRequest.getRole(), "admin")) ? Role.ADMIN : Role.USER);
         user.setPassword(passwordEncoder.encode(signUpRequest.getPassword()));
         return userRepository.save(user);
 

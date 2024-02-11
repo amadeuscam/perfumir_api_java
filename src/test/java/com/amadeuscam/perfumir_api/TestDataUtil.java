@@ -49,9 +49,9 @@ public class TestDataUtil {
                 .quantity(10)
                 .build();
     }
-    public static OlfactiveFamilies createOlfactiveFamilies(String family) {
+    public static OlfactiveFamilies createOlfactiveFamilies(Long id,String family) {
         return OlfactiveFamilies.builder()
-                .id(1L)
+                .id(id)
                 .name(family)
                 .build();
     }
