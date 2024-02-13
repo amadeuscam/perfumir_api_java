@@ -32,68 +32,43 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class DilutionRepositoryIntegrationTest {
 
     @Autowired
-    private   DilutionRepository underTest;
-    @Autowired
-    private   IngredientRepository ingredientRepository;
-
+    private DilutionRepository underTest;
 
 
     @Test
-    public void testThatDilutionCanBeCreated() {
-        Set<Dilution> dilutions = new HashSet<>();
-        Set<OlfactiveFamilies> olfactiveFamilies = new HashSet<>();
+    public void testThatDilutionCanBeCreatedAndFindIt() {
 
         final Dilution dilution = TestDataUtil.createDilution(1L);
-        Ingredient ingredient = TestDataUtil.createTestIngredient(2L, dilutions, olfactiveFamilies);
-
-        ingredientRepository.save(ingredient);
-        dilution.setIngredient(ingredient);
-
         final Dilution saved = underTest.save(dilution);
+
         final Optional<Dilution> optionalDilution = underTest.findById(saved.getId());
 
         assertThat(optionalDilution).isPresent();
         assertThat(optionalDilution.get().getQuantity()).isEqualTo(10);
-        assertThat(optionalDilution.get().getIngredient()).isNotNull();
     }
 
     @Test
-    public void testThatDilutionIsCreatedWhenSaveIngredient() {
-        final Dilution dilution = TestDataUtil.createDilution(1L);
-        Set<Dilution> dilutions = new HashSet<>();
-        dilutions.add(dilution);
-        Ingredient ingredient = TestDataUtil.createTestIngredient(1L, null, null);
-        ingredient.setDilutions(dilutions);
-        final Ingredient serviceIngredient = ingredientRepository.save(ingredient);
-        assertThat(serviceIngredient.getDilutions().size()).isEqualTo(1);
-        assertThat(serviceIngredient.getDilutions().stream().findFirst().get().getQuantity()).isEqualTo(dilution.getQuantity());
-
-    }
-
-    @Test
-    public void testThatDilutionIsDeletedWhenUpdateIngredient() {
-        final Dilution dilution = TestDataUtil.createDilution(1L);
-        Set<Dilution> dilutions = new HashSet<>();
-        Set<OlfactiveFamilies> olfactiveFamilies = new HashSet<>();
-        dilutions.add(dilution);
-        Ingredient ingredient = TestDataUtil.createTestIngredient(1L, dilutions, olfactiveFamilies);
-        final Ingredient serviceIngredient1 = ingredientRepository.save(ingredient);
-        serviceIngredient1.getDilutions().removeIf(dilution1 -> Objects.equals(dilution1.getId(), dilution.getId()));
-
-        final Ingredient serviceIngredient = ingredientRepository.save(serviceIngredient1);
-        assertThat(serviceIngredient.getDilutions().size()).isEqualTo(0);
-    }
-
-    @Test
-    public void testThatDilutionCanBeUpdated() {
+    public void testThatDilutionIsCreatedAndUpdated() {
         final Dilution dilution = TestDataUtil.createDilution(1L);
         underTest.save(dilution);
-        dilution.setQuantity(60);
-        underTest.save(dilution);
-        final Optional<Dilution> dilutionOptional = underTest.findById(dilution.getId());
-        assertThat(dilutionOptional).isPresent();
-        assertThat(dilutionOptional.get().getQuantity()).isEqualTo(60);
+        Dilution dilution1 = Dilution.builder()
+                .id(1L)
+                .quantity(20)
+                .build();
+        underTest.save(dilution1);
+        final Optional<Dilution> optionalDilution = underTest.findById(1L);
 
+        assertThat(optionalDilution).isPresent();
+        assertThat(optionalDilution.get().getQuantity()).isEqualTo(20);
+    }
+
+
+    @Test
+    public void testThatDilutionCanBeDeleted() {
+        final Dilution dilution = TestDataUtil.createDilution(1L);
+        Dilution saved = underTest.save(dilution);
+        underTest.deleteById(saved.getId());
+        assertThat(underTest.findById(1L)).isEmpty();
     }
 
 

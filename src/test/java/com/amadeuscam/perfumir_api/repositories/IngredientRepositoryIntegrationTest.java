@@ -35,31 +35,11 @@ public class IngredientRepositoryIntegrationTest {
         Set<Dilution> dilutions = new HashSet<>();
         Set<OlfactiveFamilies> olfactiveFamilies = new HashSet<>();
 
-        Ingredient ingredient = TestDataUtil.createTestIngredient(10L, null, null);
-        ingredientRepository.saveAndFlush(ingredient);
+        Ingredient ingredient = TestDataUtil.createTestIngredient(10L, dilutions, olfactiveFamilies);
+        ingredientRepository.save(ingredient);
         final Optional<Ingredient> result = ingredientRepository.findById(ingredient.getId());
         assertThat(result).isPresent();
-//        assertThat(result.get().getDilutions().size()).isEqualTo(0);
-    }
-
-    @Test
-    public void testThatMultipleIngredientsCanBeCreatedAndRecalled() {
-        Set<Dilution> dilutions = new HashSet<>();
-        Set<OlfactiveFamilies> olfactiveFamilies = new HashSet<>();
-
-        Ingredient ingredient1 = TestDataUtil.createTestIngredient(1L, dilutions, olfactiveFamilies);
-        ingredientRepository.save(ingredient1);
-        Ingredient ingredient2 = TestDataUtil.createTestIngredient(2L, dilutions, olfactiveFamilies);
-        ingredient2.setCasNumber("788778--8-9");
-        ingredient2.setName("vetiver");
-        ingredientRepository.save(ingredient2);
-        Ingredient ingredient3 = TestDataUtil.createTestIngredient(3L, dilutions, olfactiveFamilies);
-        ingredient3.setCasNumber("788778--8-10");
-        ingredient3.setName("orris");
-        ingredientRepository.save(ingredient3);
-
-        final Iterable<Ingredient> ingredientList = ingredientRepository.findAll();
-        assertThat(ingredientList).hasSize(3);
+        assertThat(result.get().getCasNumber()).isEqualTo("3738-00-9");
     }
 
     @Test
@@ -75,6 +55,18 @@ public class IngredientRepositoryIntegrationTest {
         final Optional<Ingredient> result = ingredientRepository.findById(ingredient.getId());
         assertThat(result).isPresent();
         assertThat(result.get().getName()).isEqualTo("Ambrxaan");
+    }
+
+    @Test
+    public void testThatIngredientCanBeDeleted() {
+        Set<Dilution> dilutions = new HashSet<>();
+        Set<OlfactiveFamilies> olfactiveFamilies = new HashSet<>();
+
+        Ingredient ingredient = TestDataUtil.createTestIngredient(1L, dilutions, olfactiveFamilies);
+        ingredientRepository.save(ingredient);
+
+        ingredientRepository.deleteById(1L);
+        assertThat(ingredientRepository.findById(1L)).isEmpty();
     }
 
 

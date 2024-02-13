@@ -4,7 +4,6 @@ import com.amadeuscam.perfumir_api.TestDataUtil;
 import com.amadeuscam.perfumir_api.entities.Dilution;
 import com.amadeuscam.perfumir_api.entities.Ingredient;
 import com.amadeuscam.perfumir_api.entities.OlfactiveFamilies;
-import com.amadeuscam.perfumir_api.services.DilutionService;
 import com.amadeuscam.perfumir_api.services.IngredientService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.transaction.Transactional;
@@ -22,7 +21,6 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import org.springframework.web.context.WebApplicationContext;
 
 import java.util.HashSet;
 import java.util.Optional;

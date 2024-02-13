@@ -31,7 +31,7 @@ public class IngredientControllerIntegrationTest {
 
     private final IngredientService ingredientService;
     private final MockMvc mockMvc;
-    private ObjectMapper objectMapper;
+    private final ObjectMapper objectMapper;
 
     @Autowired
     private WebApplicationContext context;
