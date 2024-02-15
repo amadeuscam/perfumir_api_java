@@ -55,7 +55,7 @@ public class DilutionServiceImpl implements DilutionService {
         return ingredientOptional.map(ingredient -> {
             ingredient.getDilutions().removeIf(d-> Objects.equals(d.getId(), id));
             return  ingredientRepository.save(ingredient);
-        }).orElseThrow(() -> new RuntimeException("Formula does not exist"));
+        }).orElseThrow(() -> new RuntimeException("Ingredient does not exist"));
     }
 
     @Override

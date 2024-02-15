@@ -49,6 +49,12 @@ public class TestDataUtil {
                 .quantity(10)
                 .build();
     }
+    public static DilutionDto createDilutionDto(Long id) {
+        return DilutionDto.builder()
+                .id(id)
+                .quantity(10)
+                .build();
+    }
     public static OlfactiveFamilies createOlfactiveFamilies(Long id,String family) {
         return OlfactiveFamilies.builder()
                 .id(id)
