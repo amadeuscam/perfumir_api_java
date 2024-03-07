@@ -1,26 +1,23 @@
 package com.amadeuscam.perfumir_api.services.impl;
 
-import com.amadeuscam.perfumir_api.entities.Dilution;
-import com.amadeuscam.perfumir_api.entities.Ingredient;
-import com.amadeuscam.perfumir_api.repository.DilutionRepository;
-import com.amadeuscam.perfumir_api.repository.IngredientRepository;
-import com.amadeuscam.perfumir_api.services.IngredientService;
-import jakarta.transaction.Transactional;
-import lombok.RequiredArgsConstructor;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-import java.util.stream.StreamSupport;
+import com.amadeuscam.perfumir_api.entities.Ingredient;
+import com.amadeuscam.perfumir_api.repository.IngredientRepository;
+import com.amadeuscam.perfumir_api.services.IngredientService;
+
+import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
 public class IngredientServiceImpl implements IngredientService {
     @Autowired
     private final IngredientRepository ingredientRepository;
-
 
     @Override
     public Ingredient createIngredient(Ingredient ingredient) {
@@ -48,9 +45,7 @@ public class IngredientServiceImpl implements IngredientService {
 
         return ingredientRepository.save(ingredientToBeUpdated);
 
-
     }
-
 
     @Override
     public Ingredient partialUpdate(Ingredient ingredient) {
@@ -70,7 +65,6 @@ public class IngredientServiceImpl implements IngredientService {
     public Optional<Ingredient> getIngredient(Long id) {
         return ingredientRepository.findById(id);
     }
-
 
     @Override
     public List<Ingredient> findAll() {

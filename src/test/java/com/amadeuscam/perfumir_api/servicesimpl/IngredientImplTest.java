@@ -1,13 +1,11 @@
 package com.amadeuscam.perfumir_api.servicesimpl;
 
-import com.amadeuscam.perfumir_api.TestDataUtil;
-import com.amadeuscam.perfumir_api.entities.Dilution;
-import com.amadeuscam.perfumir_api.entities.Ingredient;
-import com.amadeuscam.perfumir_api.entities.OlfactiveFamilies;
-import com.amadeuscam.perfumir_api.repository.IngredientRepository;
-import com.amadeuscam.perfumir_api.services.impl.IngredientServiceImpl;
-import com.amadeuscam.perfumir_api.services.impl.OlfativeFamiliesServiceImpl;
-import lombok.RequiredArgsConstructor;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.when;
+
+import java.util.Set;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -15,18 +13,20 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.test.annotation.DirtiesContext;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.when;
+import com.amadeuscam.perfumir_api.TestDataUtil;
+import com.amadeuscam.perfumir_api.entities.Dilution;
+import com.amadeuscam.perfumir_api.entities.Ingredient;
+import com.amadeuscam.perfumir_api.entities.OlfactiveFamilies;
+import com.amadeuscam.perfumir_api.repository.IngredientRepository;
+import com.amadeuscam.perfumir_api.services.impl.IngredientServiceImpl;
+import com.amadeuscam.perfumir_api.services.impl.OlfativeFamiliesServiceImpl;
 
 @ExtendWith(MockitoExtension.class)
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
 public class IngredientImplTest {
     @Mock
     private IngredientRepository ingredientRepository;
+
     @InjectMocks
     private IngredientServiceImpl underTest;
 
