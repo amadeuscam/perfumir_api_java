@@ -1,29 +1,29 @@
 package com.amadeuscam.perfumir_api.services.impl;
 
-import com.amadeuscam.perfumir_api.entities.Ingredient;
-import com.amadeuscam.perfumir_api.entities.OlfactiveFamilies;
-import com.amadeuscam.perfumir_api.repository.IngredientRepository;
-import com.amadeuscam.perfumir_api.repository.OlfactiveFamiliesRepository;
-import com.amadeuscam.perfumir_api.services.OlfativeFamiliesService;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
+import com.amadeuscam.perfumir_api.entities.Ingredient;
+import com.amadeuscam.perfumir_api.entities.OlfactiveFamilies;
+import com.amadeuscam.perfumir_api.repository.IngredientRepository;
+import com.amadeuscam.perfumir_api.repository.OlfactiveFamiliesRepository;
+import com.amadeuscam.perfumir_api.services.OlfativeFamiliesService;
+
 @Service
 public class OlfativeFamiliesServiceImpl implements OlfativeFamiliesService {
-
 
     private final IngredientRepository ingredientRepository;
     private final OlfactiveFamiliesRepository olfactiveFamiliesRepository;
 
-    public OlfativeFamiliesServiceImpl(IngredientRepository ingredientRepository, OlfactiveFamiliesRepository olfactiveFamiliesRepository) {
+    public OlfativeFamiliesServiceImpl(IngredientRepository ingredientRepository,
+            OlfactiveFamiliesRepository olfactiveFamiliesRepository) {
         this.ingredientRepository = ingredientRepository;
         this.olfactiveFamiliesRepository = olfactiveFamiliesRepository;
     }
-
 
     @Override
     public OlfactiveFamilies createOlfactiveFamilies(OlfactiveFamilies olfactiveFamilies, Long ingredientId) {
@@ -52,8 +52,8 @@ public class OlfativeFamiliesServiceImpl implements OlfativeFamiliesService {
 
         return ingredientOptional.map(ingredient -> {
 
-            if (ingredient.getOlfactiveFamilies().stream().noneMatch(d -> Objects.equals(d.getId(), id))){
-                throw  new RuntimeException("OLfatives Id does not found");
+            if (ingredient.getOlfactiveFamilies().stream().noneMatch(d -> Objects.equals(d.getId(), id))) {
+                throw new RuntimeException("OLfatives Id does not found");
             }
             ingredient.getOlfactiveFamilies().removeIf(d -> Objects.equals(d.getId(), id));
             return ingredientRepository.save(ingredient);
@@ -61,10 +61,11 @@ public class OlfativeFamiliesServiceImpl implements OlfativeFamiliesService {
     }
 
     @Override
-    public Optional<OlfactiveFamilies> getOlfactiveFamilies(Long id, Long ingredientId) {
+    public Optional<OlfactiveFamilies> getOlfactiveFamilies(Long olfactiveFamilyId, Long ingredientId) {
         Optional<Ingredient> ingredientOptional = ingredientRepository.findById(ingredientId);
         return ingredientOptional.map(ingredient -> {
-            return ingredient.getOlfactiveFamilies().stream().filter(d -> Objects.equals(d.getId(), id)).findFirst();
+            return ingredient.getOlfactiveFamilies().stream().filter(d -> Objects.equals(d.getId(), olfactiveFamilyId))
+                    .findFirst();
         }).orElseThrow(() -> new RuntimeException("Ingredient does not exist"));
     }
 
