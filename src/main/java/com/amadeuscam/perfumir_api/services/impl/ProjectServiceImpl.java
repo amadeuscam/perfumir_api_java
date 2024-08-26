@@ -1,13 +1,14 @@
 package com.amadeuscam.perfumir_api.services.impl;
 
-import com.amadeuscam.perfumir_api.entities.Project;
-import com.amadeuscam.perfumir_api.repository.ProjectRepository;
-import com.amadeuscam.perfumir_api.services.ProjectService;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
+import com.amadeuscam.perfumir_api.entities.Project;
+import com.amadeuscam.perfumir_api.repository.ProjectRepository;
+import com.amadeuscam.perfumir_api.services.ProjectService;
 
 @Service
 public class ProjectServiceImpl implements ProjectService {
@@ -23,8 +24,8 @@ public class ProjectServiceImpl implements ProjectService {
     @Override
     public Project createProject(Project project) {
 
-        if (!(project.getFormulas() == null) && !project.getFormulas().isEmpty()) {
-            project.getFormulas().forEach(d -> d.setProject(project));
+        if (!(project.getFormulasManagement() == null) && !project.getFormulasManagement().isEmpty()) {
+            project.getFormulasManagement().forEach(d -> d.setProject(project));
         }
         return projectRepository.save(project);
     }
@@ -32,8 +33,8 @@ public class ProjectServiceImpl implements ProjectService {
     @Override
     public Project updateProject(Project project) {
 
-        if (!(project.getFormulas() == null) && !project.getFormulas().isEmpty()) {
-            project.getFormulas().forEach(d -> d.setProject(project));
+        if (!(project.getFormulasManagement() == null) && !project.getFormulasManagement().isEmpty()) {
+            project.getFormulasManagement().forEach(d -> d.setProject(project));
         }
         return projectRepository.save(project);
     }

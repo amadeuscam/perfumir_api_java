@@ -6,10 +6,8 @@ import com.amadeuscam.perfumir_api.dto.DilutionDto;
 import com.amadeuscam.perfumir_api.dto.IngredientDto;
 import com.amadeuscam.perfumir_api.dto.OlfactiveFamiliesDto;
 import com.amadeuscam.perfumir_api.entities.Dilution;
-import com.amadeuscam.perfumir_api.entities.Formula;
 import com.amadeuscam.perfumir_api.entities.Ingredient;
 import com.amadeuscam.perfumir_api.entities.OlfactiveFamilies;
-import com.amadeuscam.perfumir_api.entities.Project;
 
 public class TestDataUtil {
 
@@ -70,21 +68,21 @@ public class TestDataUtil {
                 .build();
     }
 
-    public static Project createProject(final Set<Formula> formulas) {
-        return Project.builder()
-                .id(1L)
-                .Name("floral")
-                .formulas(formulas)
-                .build();
-    }
+//     public static Project createProject(final Set<Formula> formulas) {
+//         return Project.builder()
+//                 .id(1L)
+//                 .Name("floral")
+//                 .formulas(formulas)
+//                 .build();
+//     }
 
-    public static Formula createFormula() {
-        return Formula.builder()
-                .id(1L)
-                .name("jane luc")
-                .status("working")
-                .version("1.1")
-                .formulaIngredients(null)
-                .build();
-    }
+//     public static Formula createFormula() {
+//         return Formula.builder()
+//                 .id(1L)
+//                 .name("jane luc")
+//                 .status("working")
+//                 .version("1.1")
+//                 .formulaIngredients(null)
+//                 .build();
+//     }
 }

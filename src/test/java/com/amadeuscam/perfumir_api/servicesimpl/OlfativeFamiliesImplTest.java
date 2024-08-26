@@ -1,12 +1,15 @@
 package com.amadeuscam.perfumir_api.servicesimpl;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
@@ -44,14 +47,12 @@ public class OlfativeFamiliesImplTest {
         ingredient.setId(ingredientId);
 
         when(ingredientRepository.findById(1L)).thenReturn(Optional.of(ingredient));
-
         when(olfactiveFamiliesRepository.save(olfactiveFamilies)).thenReturn(olfactiveFamilies);
 
-        OlfactiveFamilies olfactiveFamilies2 = olfativeFamiliesService.createOlfactiveFamilies(olfactiveFamilies,
-                ingredientId);
-        assertEquals(olfactiveFamilies, olfactiveFamilies2);
-        assertNotNull(olfactiveFamilies2.getIngredient());
-        assertEquals(ingredient, olfactiveFamilies2.getIngredient());
+        OlfactiveFamilies result = olfativeFamiliesService.createOlfactiveFamilies(olfactiveFamilies, ingredientId);
+        assertNotNull(result);
+        assertEquals(ingredient, result.getIngredient());
+        verify(olfactiveFamiliesRepository).save(olfactiveFamilies);
 
     }
 
@@ -64,134 +65,154 @@ public class OlfativeFamiliesImplTest {
 
         assertThrows(RuntimeException.class,
                 () -> olfativeFamiliesService.createOlfactiveFamilies(olfactiveFamilies, ingredientId));
+
+        verify(ingredientRepository).findById(ingredientId);
+        verify(olfactiveFamiliesRepository, never()).save(any(OlfactiveFamilies.class));
     }
 
     @Test
-    public void testThatUpdateOlfativeFamilyFromIngredient() {
+    public void testUpdateOlfactiveFamilies_Success() {
         Long ingredientId = 1L;
-        OlfactiveFamilies olfactiveFamilies = new OlfactiveFamilies();
+
         Ingredient ingredient = new Ingredient();
         ingredient.setId(ingredientId);
-        olfactiveFamilies.setId(2l);
 
-        when(ingredientRepository.findById(1L)).thenReturn(Optional.of(ingredient));
+        OlfactiveFamilies olfactiveFamilies = new OlfactiveFamilies();
+        olfactiveFamilies.setId(1L);
+
+        when(ingredientRepository.findById(ingredientId)).thenReturn(Optional.of(ingredient));
         when(olfactiveFamiliesRepository.save(olfactiveFamilies)).thenReturn(olfactiveFamilies);
 
-        OlfactiveFamilies olfactiveFamilies2 = olfativeFamiliesService.updateOlfactiveFamilies(olfactiveFamilies,
+        OlfactiveFamilies result = olfativeFamiliesService.updateOlfactiveFamilies(olfactiveFamilies,
                 ingredientId);
-        assertEquals(olfactiveFamilies, olfactiveFamilies2);
-        assertNotNull(olfactiveFamilies2.getIngredient());
-        assertEquals(ingredient, olfactiveFamilies2.getIngredient());
+        assertEquals(olfactiveFamilies, result);
+        assertNotNull(result.getIngredient());
+        assertEquals(ingredient, result.getIngredient());
 
     }
 
     @Test
-    public void testThatUpdateOlfativeFamilyFromIngredientNotId() {
+    public void testUpdateOlfactiveFamilies_NoId() {
         Long ingredientId = 1L;
-        OlfactiveFamilies olfactiveFamilies = new OlfactiveFamilies();
+
         Ingredient ingredient = new Ingredient();
         ingredient.setId(ingredientId);
 
-        when(ingredientRepository.findById(1L)).thenReturn(Optional.of(ingredient));
+        OlfactiveFamilies olfactiveFamilies = new OlfactiveFamilies();
+
+        when(ingredientRepository.findById(ingredientId)).thenReturn(Optional.of(ingredient));
+
         assertThrows(RuntimeException.class,
                 () -> olfativeFamiliesService.updateOlfactiveFamilies(olfactiveFamilies, ingredientId));
 
+        verify(ingredientRepository).findById(ingredientId);
+        verify(olfactiveFamiliesRepository, never()).save(any(OlfactiveFamilies.class));
     }
 
     @Test
-    public void testThatOlfativeFamilyDeleteFromIngredient() {
+    public void testDeleteOlfactiveFamilies_Success() {
+
         Long ingredientId = 1l;
         Long OlfativeId = 2l;
 
-        OlfactiveFamilies olfactiveFamilies = new OlfactiveFamilies();
         Ingredient ingredient = new Ingredient();
-
         ingredient.setId(ingredientId);
-        olfactiveFamilies.setId(OlfativeId);
 
-        Set<OlfactiveFamilies> oplFamilies = new HashSet<>();
-        oplFamilies.add(olfactiveFamilies);
-        ingredient.setOlfactiveFamilies(oplFamilies);
+        OlfactiveFamilies olfactiveFamily = new OlfactiveFamilies();
+        olfactiveFamily.setId(OlfativeId);
+
+        Set<OlfactiveFamilies> olfactiveFamiliesSet = new HashSet<>();
+        olfactiveFamiliesSet.add(olfactiveFamily);
+        ingredient.setOlfactiveFamilies(olfactiveFamiliesSet);
 
         when(ingredientRepository.findById(ingredientId)).thenReturn(Optional.of(ingredient));
         when(ingredientRepository.save(ingredient)).thenReturn(ingredient);
 
-        Ingredient deleteOlfactiveFamilies = olfativeFamiliesService.deleteOlfactiveFamilies(OlfativeId, ingredientId);
-
-        assertEquals(ingredient, deleteOlfactiveFamilies);
-        assertTrue(ingredient.getOlfactiveFamilies().isEmpty());
+        Ingredient result = olfativeFamiliesService.deleteOlfactiveFamilies(OlfativeId, ingredientId);
+        assertNotNull(result);
+        assertFalse(result.getOlfactiveFamilies().contains(olfactiveFamily));
+        verify(ingredientRepository).findById(ingredientId);
+        verify(ingredientRepository).save(ingredient);
     }
 
     @Test
-    public void testThatGetOlfativeFamiliesByIdFromIngredient() {
-        Long ingredientId = 1l;
-        Long OlfativeId = 2l;
+    public void testDeleteOlfactiveFamilies_NotFound() {
+        // Datos de prueba
+        Long ingredientId = 1L;
+        Long olfactiveFamilyId = 2L;
 
-        OlfactiveFamilies olfactiveFamilies = new OlfactiveFamilies();
         Ingredient ingredient = new Ingredient();
-
         ingredient.setId(ingredientId);
-        olfactiveFamilies.setId(OlfativeId);
-
-        Set<OlfactiveFamilies> oplFamilies = new HashSet<>();
-        oplFamilies.add(olfactiveFamilies);
-        ingredient.setOlfactiveFamilies(oplFamilies);
 
         when(ingredientRepository.findById(ingredientId)).thenReturn(Optional.of(ingredient));
 
-        Optional<OlfactiveFamilies> olfactiveFamilies2 = olfativeFamiliesService.getOlfactiveFamilies(OlfativeId,
+        // Ejecución y verificación
+        assertThrows(RuntimeException.class, () -> {
+            olfativeFamiliesService.deleteOlfactiveFamilies(olfactiveFamilyId, ingredientId);
+        });
+
+        verify(ingredientRepository).findById(ingredientId);
+        verify(ingredientRepository, never()).save(any(Ingredient.class));
+    }
+
+    @Test
+    public void testGetOlfactiveFamilies_Success() {
+        // Datos de prueba
+        Long ingredientId = 1L;
+        Long olfactiveFamilyId = 2L;
+
+        Ingredient ingredient = new Ingredient();
+        ingredient.setId(ingredientId);
+
+        OlfactiveFamilies olfactiveFamily = new OlfactiveFamilies();
+        olfactiveFamily.setId(olfactiveFamilyId);
+
+        Set<OlfactiveFamilies> olfactiveFamiliesSet = new HashSet<>();
+        olfactiveFamiliesSet.add(olfactiveFamily);
+        ingredient.setOlfactiveFamilies(olfactiveFamiliesSet);
+
+        when(ingredientRepository.findById(ingredientId)).thenReturn(Optional.of(ingredient));
+
+        // Ejecución
+        Optional<OlfactiveFamilies> result = olfativeFamiliesService.getOlfactiveFamilies(olfactiveFamilyId,
                 ingredientId);
 
-        assertEquals(olfactiveFamilies, olfactiveFamilies2.get());
-        assertTrue(olfactiveFamilies2.isPresent());
+        // Verificación
+        assertTrue(result.isPresent());
+        assertEquals(olfactiveFamily, result.get());
+        verify(ingredientRepository).findById(ingredientId);
     }
 
     @Test
-    public void testThatGetOlfativeFamiliesFromIngredient() {
-        Long ingredientId = 1l;
-        Long OlfativeId = 2l;
+    public void testGetOlfactiveFamilies_IngredientNotFound() {
+        // Datos de prueba
+        Long ingredientId = 1L;
+        Long olfactiveFamilyId = 2L;
 
-        OlfactiveFamilies olfactiveFamilies = new OlfactiveFamilies();
-        Ingredient ingredient = new Ingredient();
+        when(ingredientRepository.findById(ingredientId)).thenReturn(Optional.empty());
 
-        ingredient.setId(ingredientId);
-        olfactiveFamilies.setId(OlfativeId);
+        // Ejecución y verificación
+        assertThrows(RuntimeException.class, () -> {
+            olfativeFamiliesService.getOlfactiveFamilies(olfactiveFamilyId, ingredientId);
+        });
 
-        Set<OlfactiveFamilies> oplFamilies = new HashSet<>();
-        oplFamilies.add(olfactiveFamilies);
-        ingredient.setOlfactiveFamilies(oplFamilies);
-
-        when(ingredientRepository.findById(ingredientId)).thenReturn(Optional.of(ingredient));
-
-        Set<OlfactiveFamilies> olfactiveFamiliess = olfativeFamiliesService.getOlfactiveFamiliess(ingredientId);
-
-        assertEquals(olfactiveFamiliess.size(), 1);
-        assertEquals(olfactiveFamilies.getName(), olfactiveFamiliess.stream().findFirst().get().getName());
-
+        verify(ingredientRepository).findById(ingredientId);
     }
 
     @Test
-    public void getUniqueOlfactiveFamiliesReturnsUniqueNames() {
-        List<String> expectedNames = new ArrayList<>();
-        expectedNames.add("Citrus");
-        expectedNames.add("Floral");
+    public void testGetUniqueOlfactiveFamilies_Success() {
+        // Datos de prueba
+        List<String> uniqueFamilies = List.of("Floral", "Woody", "Citrus");
 
-        when(olfactiveFamiliesRepository.findDistinctByName()).thenReturn(expectedNames);
+        when(olfactiveFamiliesRepository.findDistinctByName()).thenReturn(uniqueFamilies);
 
-        List<String> actualNames = olfativeFamiliesService.getUniqueOlfactiveFamilies();
+        // Ejecución
+        List<String> result = olfativeFamiliesService.getUniqueOlfactiveFamilies();
 
-        assertEquals(expectedNames, actualNames);
+        // Verificación
+        assertNotNull(result);
+        assertEquals(uniqueFamilies.size(), result.size());
+        assertEquals(uniqueFamilies, result);
+        verify(olfactiveFamiliesRepository).findDistinctByName();
     }
-
-    @Test
-    public void getUniqueOlfactiveFamiliesReturnsEmptyListWhenNoUniqueNamesExist() {
-        List<String> expectedNames = new ArrayList<>();
-
-        when(olfactiveFamiliesRepository.findDistinctByName()).thenReturn(expectedNames);
-
-        List<String> actualNames = olfativeFamiliesService.getUniqueOlfactiveFamilies();
-
-        assertEquals(expectedNames, actualNames);
-    }
-
 }

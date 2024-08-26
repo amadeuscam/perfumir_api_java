@@ -1,7 +1,7 @@
 package com.amadeuscam.perfumir_api.dto;
 
-import java.math.BigDecimal;
 import java.util.Date;
+import java.util.Set;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,14 +12,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class FormulaIngredientDto {
-
+public class FormulaManagementDto {
     private Long id;
-    private String ingredientName;
-    private String pyramidLevel;
-    private BigDecimal amount;
-    private Integer dilutionOfIngredient;
-    private Integer alcohol;
+    private String name;
+    private String status;
+    private String version;
     private Date created;
     private Date updated;
+
+    private Set<FormulaDto> formulas;
 }

@@ -1,5 +1,6 @@
 package com.amadeuscam.perfumir_api.controllers;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -67,6 +68,21 @@ public class FormulaIngredientController {
         final FormulaIngredient toFormula = formulaIngredientService.addFormulaIngredientToFormula(formulaIngredient,
                 formulaId);
         return new ResponseEntity<>(formulaIngredientMapper.mapTo(toFormula), HttpStatus.OK);
+    }
+
+    @PostMapping(value = "ingredients/{formulaId}")
+    public ResponseEntity<FormulaIngredientDto> addIngredientsToFormula(@PathVariable("formulaId") Long formulaId,
+            @RequestBody List<FormulaIngredientDto> formulaIngredientDtos) {
+
+        List<FormulaIngredient> formulaIngredients = new ArrayList<>();
+
+        formulaIngredientDtos.forEach(fr -> {
+            FormulaIngredient formulaIngredient = formulaIngredientMapper.mapFrom(fr);
+            formulaIngredients.add(formulaIngredient);
+        });
+        formulaIngredientService.addFormulaIngredientsToFormula(formulaIngredients, formulaId);
+
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @PutMapping(value = "{formulaId}")

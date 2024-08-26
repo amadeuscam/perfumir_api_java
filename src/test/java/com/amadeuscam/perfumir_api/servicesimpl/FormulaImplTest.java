@@ -1,217 +1,174 @@
 package com.amadeuscam.perfumir_api.servicesimpl;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
+import org.mockito.MockitoAnnotations;
 
 import com.amadeuscam.perfumir_api.entities.Formula;
-import com.amadeuscam.perfumir_api.entities.Project;
+import com.amadeuscam.perfumir_api.entities.FormulaManagement;
+import com.amadeuscam.perfumir_api.repository.FormulaManagementRepository;
 import com.amadeuscam.perfumir_api.repository.FormulaRepository;
-import com.amadeuscam.perfumir_api.repository.ProjectRepository;
 import com.amadeuscam.perfumir_api.services.impl.FormulaServiceImpl;
 
-@ExtendWith(MockitoExtension.class)
 public class FormulaImplTest {
 
     @Mock
     private FormulaRepository formulaRepository;
+
     @Mock
-    private ProjectRepository projectRepository;
+    private FormulaManagementRepository fManagementRepository;
 
     @InjectMocks
-    private FormulaServiceImpl formulaServiceImpl;
+    private FormulaServiceImpl formulaService;
+
+    @BeforeEach
+    void setUp() {
+        MockitoAnnotations.openMocks(this);
+    }
 
     @Test
-    public void testThatCanAddFormulaToProject() {
-        // Prepare mock data
-        Formula formula = new Formula();
-        Project project = new Project();
-        project.setId(1L);
-        Optional<Project> optionalProject = Optional.of(project);
+    void testFindAllFormulas() {
+        List<Formula> formulas = Arrays.asList(new Formula(), new Formula());
+        when(formulaRepository.findAll()).thenReturn(formulas);
 
-        // Mock repository behavior
-        when(projectRepository.findById(1L)).thenReturn(optionalProject);
+        List<Formula> result = formulaService.findAllFormulas();
+
+        assertEquals(formulas.size(), result.size());
+        verify(formulaRepository, times(1)).findAll();
+    }
+
+    @Test
+    void testFindAllFormulasByFormulaManagement() {
+        Long formulaManagementId = 1L;
+        FormulaManagement fManagement = new FormulaManagement();
+        Set<Formula> formulas = new HashSet<>(Arrays.asList(new Formula(), new Formula()));
+        fManagement.setFormulas(formulas);
+
+        when(fManagementRepository.findById(formulaManagementId)).thenReturn(Optional.of(fManagement));
+
+        Set<Formula> result = formulaService.findAllFormulasByFormulaManagement(formulaManagementId);
+
+        assertEquals(formulas.size(), result.size());
+        verify(fManagementRepository, times(1)).findById(formulaManagementId);
+    }
+
+    @Test
+    void testCreateFormula() {
+        Long formulaManagementId = 1L;
+        Formula formula = new Formula();
+        FormulaManagement fManagement = new FormulaManagement();
+
+        when(fManagementRepository.findById(formulaManagementId)).thenReturn(Optional.of(fManagement));
         when(formulaRepository.save(formula)).thenReturn(formula);
 
-        // Call the service method
-        Formula createdFormula = formulaServiceImpl.createFormula(formula, 1L);
+        Formula result = formulaService.createFormula(formula, formulaManagementId);
 
-        // Assertions
-        assertEquals(formula, createdFormula);
-        verify(projectRepository, times(1)).findById(1L);
+        assertNotNull(result);
+        verify(fManagementRepository, times(1)).findById(formulaManagementId);
         verify(formulaRepository, times(1)).save(formula);
     }
 
     @Test
-    public void testThatCanUpdateFormulaToProject() {
-        // Prepare mock data
+    void testCreateFormulaThrowsExceptionWhenFormulaManagementNotFound() {
+        Long formulaManagementId = 1L;
         Formula formula = new Formula();
-        Project project = new Project();
-        project.setId(1L);
-        Optional<Project> optionalProject = Optional.of(project);
 
-        // Mock repository behavior
-        when(projectRepository.findById(1L)).thenReturn(optionalProject);
+        // Configuramos el mock para que devuelva un Optional vacío
+        when(fManagementRepository.findById(formulaManagementId)).thenReturn(Optional.empty());
+
+        // Verificamos que el método lance una excepción
+        assertThrows(RuntimeException.class, () -> {
+            formulaService.createFormula(formula, formulaManagementId);
+        });
+
+        verify(fManagementRepository, times(1)).findById(formulaManagementId);
+        verify(formulaRepository, never()).save(formula); // Asegura que save no se llame
+    }
+
+    @Test
+    void testUpdateFormula() {
+        Long formulaManagementId = 1L;
+        Formula formula = new Formula();
+        FormulaManagement fManagement = new FormulaManagement();
+
+        when(fManagementRepository.findById(formulaManagementId)).thenReturn(Optional.of(fManagement));
         when(formulaRepository.save(formula)).thenReturn(formula);
 
-        formula.setName("marine");
+        Formula result = formulaService.updateFormula(formula, formulaManagementId);
 
-        // Call the service method
-        Formula createdFormula = formulaServiceImpl.updateFormula(formula, 1L);
-
-        // Assertions
-        assertEquals(formula.getName(), createdFormula.getName());
-        verify(projectRepository, times(1)).findById(1L);
+        assertNotNull(result);
+        verify(fManagementRepository, times(1)).findById(formulaManagementId);
         verify(formulaRepository, times(1)).save(formula);
     }
 
     @Test
-    public void testCreateFormula_ProjectNotFound() {
-        // Prepare mock data
+    void testGetFormula() {
+        Long formulaManagementId = 1L;
+        Long formulaId = 2L;
+        Formula formula = new Formula();
+        FormulaManagement fManagement = new FormulaManagement();
+
+        when(fManagementRepository.findById(formulaManagementId)).thenReturn(Optional.of(fManagement));
+        when(formulaRepository.findById(formulaId)).thenReturn(Optional.of(formula));
+
+        Optional<Formula> result = formulaService.getFormula(formulaManagementId, formulaId);
+
+        assertTrue(result.isPresent());
+        verify(fManagementRepository, times(1)).findById(formulaManagementId);
+        verify(formulaRepository, times(1)).findById(formulaId);
+    }
+
+    @Test
+    void testIsFormulaExists() {
+        Long formulaId = 1L;
+
+        when(formulaRepository.existsById(formulaId)).thenReturn(true);
+
+        boolean result = formulaService.isFormulaExists(formulaId);
+
+        assertTrue(result);
+        verify(formulaRepository, times(1)).existsById(formulaId);
+    }
+
+    @Test
+    void testDeleteFormula() {
+        Long formulaManagementId = 1L;
+        Long formulaId = 2L;
+
+        FormulaManagement fManagement = new FormulaManagement();
         Formula formula = new Formula();
 
-        // Mock repository behavior (project not found)
-        when(projectRepository.findById(1L)).thenReturn(Optional.empty());
+        formula.setId(formulaId);
+        Set<Formula> formulas = new HashSet<>(Collections.singletonList(formula));
+        fManagement.setFormulas(formulas);
 
-        // Call the service method (expect exception)
-        assertThrows(RuntimeException.class, () -> formulaServiceImpl.createFormula(formula, 1L));
+        when(fManagementRepository.findById(formulaManagementId)).thenReturn(Optional.of(fManagement));
+        when(fManagementRepository.save(fManagement)).thenReturn(fManagement);
 
-    }
+        FormulaManagement result = formulaService.deleteFormula(formulaManagementId, formulaId);
 
-    @Test
-    public void getFormula_projectExistsAndFormulaExists_returnsFormula() {
-        Long projectID = 1L;
-        Long formulaID = 2L;
-        Project project = new Project();
-        Formula formula = new Formula();
-
-        when(projectRepository.findById(projectID)).thenReturn(Optional.of(project));
-        when(formulaRepository.findById(formulaID)).thenReturn(Optional.of(formula));
-
-        Optional<Formula> retrievedFormula = formulaServiceImpl.getFormula(projectID, formulaID);
-
-        assertEquals(Optional.of(formula), retrievedFormula);
-    }
-
-    @Test
-    public void getFormulaProjectDoesNotExistThrowsRuntimeException() {
-        Long projectID = 1L;
-        Long formulaID = 2L;
-
-        when(projectRepository.findById(projectID)).thenReturn(Optional.empty());
-
-        assertThrows(RuntimeException.class, () -> formulaServiceImpl.getFormula(projectID, formulaID));
-    }
-
-    @Test
-    public void deleteFormulaProjectExistsAndFormulaExistsRemovesFormulaAndReturnsProject() {
-        Long projectId = 1L;
-        Long formulaId = 2L;
-
-        Project project = new Project();
-        Formula formulaToRemove = new Formula();
-
-        formulaToRemove.setId(formulaId);
-        Set<Formula> formulas = new HashSet<>();
-
-        formulas.add(formulaToRemove);
-        project.setFormulas(formulas);
-
-        when(projectRepository.findById(projectId)).thenReturn(Optional.of(project));
-        when(projectRepository.save(project)).thenReturn(project); // Optional in this test
-
-        Project returnedProject = formulaServiceImpl.deleteFormula(projectId, formulaId);
-
-        assertEquals(project, returnedProject);
-        assertTrue(project.getFormulas().isEmpty());
-    }
-
-    @Test
-    public void deleteFormulaProjectExistsAndFormulaNotFoundReturnsProject() {
-        Long projectId = 1L;
-        Long formulaId = 2L;
-        Project project = new Project();
-        Set<Formula> formulas = new HashSet<>();
-        project.setFormulas(formulas);
-
-        when(projectRepository.findById(projectId)).thenReturn(Optional.of(project));
-        when(projectRepository.save(project)).thenReturn(project);
-
-        Project returnedProject = formulaServiceImpl.deleteFormula(projectId, formulaId);
-
-        assertEquals(project, returnedProject);
-        assertEquals(formulas, returnedProject.getFormulas());
-    }
-
-    @Test
-    public void deleteFormulaProjectDoesNotExistThrowsRuntimeException() {
-        Long projectId = 1L;
-        Long formulaId = 2L;
-
-        when(projectRepository.findById(projectId)).thenReturn(Optional.empty());
-
-        assertThrows(RuntimeException.class, () -> formulaServiceImpl.deleteFormula(projectId, formulaId));
-    }
-
-    @Test
-    public void testThatFormulaExists() {
-
-        Long existingId = 1L;
-        when(formulaRepository.existsById(existingId)).thenReturn(true);
-
-        boolean exists = formulaServiceImpl.isFormulaExists(existingId);
-
-        assertTrue(exists);
-    }
-
-    @Test
-    public void isFormulaExistsFormulaDoesNotExistReturnsFalse() {
-        Long nonExistingId = 2L;
-        when(formulaRepository.existsById(nonExistingId)).thenReturn(false);
-
-        boolean exists = formulaServiceImpl.isFormulaExists(nonExistingId);
-
-        assertFalse(exists);
-    }
-
-    @Test
-    public void findAllFormulasReturnsAllFormulas() {
-        List<Formula> expectedFormulas = new ArrayList<>();
-        expectedFormulas.add(new Formula());
-        expectedFormulas.add(new Formula());
-
-        when(formulaRepository.findAll()).thenReturn(expectedFormulas);
-
-        List<Formula> actualFormulas = formulaServiceImpl.findAllFormulas();
-
-        assertEquals(expectedFormulas, actualFormulas);
-    }
-
-    @Test
-    public void findAllFormulasReturnsEmptyListWhenNoFormulasExist() {
-        List<Formula> expectedFormulas = new ArrayList<>();
-
-        when(formulaRepository.findAll()).thenReturn(expectedFormulas);
-
-        List<Formula> actualFormulas = formulaServiceImpl.findAllFormulas();
-
-        assertEquals(expectedFormulas, actualFormulas);
+        assertNotNull(result);
+        assertTrue(result.getFormulas().isEmpty());
+        verify(fManagementRepository, times(1)).findById(formulaManagementId);
+        verify(fManagementRepository, times(1)).save(fManagement);
     }
 
 }

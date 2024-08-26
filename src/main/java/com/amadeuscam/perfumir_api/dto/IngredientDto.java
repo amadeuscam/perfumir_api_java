@@ -1,12 +1,11 @@
 package com.amadeuscam.perfumir_api.dto;
 
-import jakarta.validation.constraints.NotBlank;
+import java.util.Set;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -20,6 +19,7 @@ public class IngredientDto {
     private String odorDescription;
     private String type;
     public Integer odorImpact;
+    public String ifra;
     public Integer odorLife;
     private Set<DilutionDto> dilutions;
     private Set<OlfactiveFamiliesDto> olfactiveFamilies;

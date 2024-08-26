@@ -7,9 +7,9 @@ import java.util.Set;
 import org.springframework.stereotype.Service;
 
 import com.amadeuscam.perfumir_api.entities.Formula;
-import com.amadeuscam.perfumir_api.entities.Project;
+import com.amadeuscam.perfumir_api.entities.FormulaManagement;
+import com.amadeuscam.perfumir_api.repository.FormulaManagementRepository;
 import com.amadeuscam.perfumir_api.repository.FormulaRepository;
-import com.amadeuscam.perfumir_api.repository.ProjectRepository;
 import com.amadeuscam.perfumir_api.services.FormulaService;
 
 @Service
@@ -17,11 +17,11 @@ public class FormulaServiceImpl implements FormulaService {
 
     private final FormulaRepository formulaRepository;
 
-    private final ProjectRepository projectRepository;
+    private final FormulaManagementRepository fManagementRepository;
 
-    public FormulaServiceImpl(FormulaRepository formulaRepository, ProjectRepository projectRepository) {
+    public FormulaServiceImpl(FormulaRepository formulaRepository, FormulaManagementRepository fmanagement) {
         this.formulaRepository = formulaRepository;
-        this.projectRepository = projectRepository;
+        this.fManagementRepository = fmanagement;
     }
 
     @Override
@@ -30,37 +30,38 @@ public class FormulaServiceImpl implements FormulaService {
     }
 
     @Override
-    public Set<Formula> findAllFormulasByProject(Long projectID) {
-        final Optional<Project> project = projectRepository.findById(projectID);
-        return project.map(Project::getFormulas).orElseThrow(() -> new RuntimeException("Project does not exist"));
+    public Set<Formula> findAllFormulasByFormulaManagement(Long formulaManagementId) {
+        final Optional<FormulaManagement> fOptional = fManagementRepository.findById(formulaManagementId);
+        return fOptional.map(FormulaManagement::getFormulas)
+                .orElseThrow(() -> new RuntimeException("Formula Management does not exist"));
 
     }
 
     @Override
-    public Formula createFormula(Formula formula, Long projectID) {
-        final Optional<Project> project = projectRepository.findById(projectID);
-        return project.map(project1 -> {
-            formula.setProject(project1);
+    public Formula createFormula(Formula formula, Long formulaManagementId) {
+        final Optional<FormulaManagement> fOptional = fManagementRepository.findById(formulaManagementId);
+        return fOptional.map(fmanagement -> {
+            formula.setFormulaManagement(fmanagement);
             return formulaRepository.save(formula);
 
-        }).orElseThrow(() -> new RuntimeException("Project does not exist"));
+        }).orElseThrow(() -> new RuntimeException("Formula Management does not exist"));
     }
 
     @Override
-    public Formula updateFormula(Formula formula, Long projectID) {
-        final Optional<Project> project = projectRepository.findById(projectID);
-        return project.map(project1 -> {
-            formula.setProject(project1);
+    public Formula updateFormula(Formula formula, Long formulaManagementId) {
+        final Optional<FormulaManagement> fOptional = fManagementRepository.findById(formulaManagementId);
+        return fOptional.map(fmanagement -> {
+            formula.setFormulaManagement(fmanagement);
             return formulaRepository.save(formula);
 
-        }).orElseThrow(() -> new RuntimeException("Project does not exist"));
+        }).orElseThrow(() -> new RuntimeException("Formula Management does not exist"));
     }
 
     @Override
-    public Optional<Formula> getFormula(Long projectID, Long id) {
-        final Optional<Project> project = projectRepository.findById(projectID);
-        return project.map(project1 -> formulaRepository.findById(id))
-                .orElseThrow(() -> new RuntimeException("Project does not exist"));
+    public Optional<Formula> getFormula(Long formulaManagementId, Long id) {
+        final Optional<FormulaManagement> fOptional = fManagementRepository.findById(formulaManagementId);
+        return fOptional.map(fmanagement -> formulaRepository.findById(id))
+                .orElseThrow(() -> new RuntimeException("Formula Management does not exist"));
     }
 
     @Override
@@ -69,11 +70,12 @@ public class FormulaServiceImpl implements FormulaService {
     }
 
     @Override
-    public Project deleteFormula(Long projectID, Long formulaId) {
-        final Optional<Project> project = projectRepository.findById(projectID);
-        return project.map(project1 -> {
-            project1.getFormulas().removeIf(s -> s.getId().equals(formulaId));
-            return projectRepository.save(project1);
-        }).orElseThrow(() -> new RuntimeException("Project does not exist"));
+    public FormulaManagement deleteFormula(Long formulaManagementId, Long formulaId) {
+        final Optional<FormulaManagement> fOptional = fManagementRepository.findById(formulaManagementId);
+        return fOptional.map(fmanagement -> {
+            fmanagement.getFormulas().removeIf(s -> s.getId().equals(formulaId));
+            return fManagementRepository.save(fmanagement);
+        }).orElseThrow(() -> new RuntimeException("Formula Management does not exist"));
     }
+
 }

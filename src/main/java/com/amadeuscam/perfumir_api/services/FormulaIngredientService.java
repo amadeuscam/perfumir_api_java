@@ -15,6 +15,8 @@ public interface FormulaIngredientService {
 
     FormulaIngredient addFormulaIngredientToFormula(FormulaIngredient formula, Long formulaID);
 
+    void addFormulaIngredientsToFormula(List<FormulaIngredient> formulaIngredients, Long formulaID);
+
     FormulaIngredient updateFormulaIngredientFromFormula(FormulaIngredient formula, Long formulaID);
 
     Formula deleteFormulaIngredient(Long formulaID, Long formulaIngredientId);

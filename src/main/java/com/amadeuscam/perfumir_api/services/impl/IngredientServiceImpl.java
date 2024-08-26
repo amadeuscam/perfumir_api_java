@@ -16,6 +16,7 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class IngredientServiceImpl implements IngredientService {
+
     @Autowired
     private final IngredientRepository ingredientRepository;
 

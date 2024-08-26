@@ -1,8 +1,12 @@
 package com.amadeuscam.perfumir_api.servicesimpl;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
@@ -34,15 +38,14 @@ public class FormulaIngredientImplTest {
     private FormulaIngredientServiceImpl formulaIngredientServiceImpl;
 
     @Test
-    public void testThatFindAllIngredientsFormula() {
-        List<FormulaIngredient> formulaINgredients = new ArrayList<>();
-        FormulaIngredient formulaIngredient = new FormulaIngredient();
-        formulaINgredients.add(formulaIngredient);
+    public void testFindAllFormulaIngredient() {
 
-        when(formulaIngredientRepository.findAll()).thenReturn(formulaINgredients);
+        List<FormulaIngredient> ingredients = new ArrayList<>();
+        when(formulaIngredientRepository.findAll()).thenReturn(ingredients);
 
-        List<FormulaIngredient> allFormulaIngredient = formulaIngredientServiceImpl.findAllFormulaIngredient();
-        assertEquals(formulaIngredient, allFormulaIngredient.get(0));
+        List<FormulaIngredient> result = formulaIngredientServiceImpl.findAllFormulaIngredient();
+        assertNotNull(result);
+        assertEquals(ingredients, result);
     }
 
     @Test
@@ -50,73 +53,70 @@ public class FormulaIngredientImplTest {
         Long formulaId = 1L;
 
         Formula formula = new Formula();
-        FormulaIngredient formulaIngredient = new FormulaIngredient();
-
-        formula.setId(formulaId);
+        FormulaIngredient ingredient = new FormulaIngredient();
 
         when(formulaRepository.findById(formulaId)).thenReturn(Optional.of(formula));
-        when(formulaIngredientRepository.save(formulaIngredient)).thenReturn(formulaIngredient);
+        when(formulaIngredientRepository.save(ingredient)).thenReturn(ingredient);
 
-        FormulaIngredient formulaIngredientToFormula = formulaIngredientServiceImpl
-                .addFormulaIngredientToFormula(formulaIngredient, formulaId);
-        assertEquals(formulaIngredient, formulaIngredientToFormula);
+        FormulaIngredient result = formulaIngredientServiceImpl.addFormulaIngredientToFormula(ingredient, formulaId);
+        assertNotNull(result);
+        assertEquals(formula, result.getFormula());
+        verify(formulaIngredientRepository, times(1)).save(ingredient);
 
     }
 
     @Test
     public void testThatAddIngredientsToFormulaThatNotExists() {
         Long formulaId = 1L;
-        Long IngredientFormulaId = 2L;
+        FormulaIngredient ingredient = new FormulaIngredient();
 
-        FormulaIngredient formulaIngredient = new FormulaIngredient();
-        formulaIngredient.setId(IngredientFormulaId);
+        when(formulaRepository.findById(formulaId)).thenReturn(Optional.empty());
 
-        assertThrows(RuntimeException.class,
-                () -> formulaIngredientServiceImpl.addFormulaIngredientToFormula(formulaIngredient, formulaId));
+        Exception exception = assertThrows(RuntimeException.class, () -> {
+            formulaIngredientServiceImpl.addFormulaIngredientToFormula(ingredient, formulaId);
+        });
+        assertEquals("Formula does not exist", exception.getMessage());
     }
 
     @Test
     public void testThatUpdateIngredientsToFormula() {
+
         Long formulaId = 1L;
 
         Formula formula = new Formula();
-        FormulaIngredient formulaIngredient = new FormulaIngredient();
+        FormulaIngredient ingredient = new FormulaIngredient();
+        ingredient.setId(1l);
 
-        formula.setId(formulaId);
-        formulaIngredient.setId(2l);
-
-        Set<FormulaIngredient> formulaIngredients = new HashSet<>();
-        formulaIngredients.add(formulaIngredient);
-
-        formula.setFormulaIngredients(formulaIngredients);
+        Set<FormulaIngredient> ingredients = new HashSet<>();
+        ingredients.add(ingredient);
+        formula.setFormulaIngredients(ingredients);
 
         when(formulaRepository.findById(formulaId)).thenReturn(Optional.of(formula));
-        when(formulaIngredientRepository.save(formulaIngredient)).thenReturn(formulaIngredient);
+        when(formulaIngredientRepository.save(ingredient)).thenReturn(ingredient);
 
-        FormulaIngredient formulaIngredientToFormula = formulaIngredientServiceImpl
-                .updateFormulaIngredientFromFormula(formulaIngredient, formulaId);
+        FormulaIngredient result = formulaIngredientServiceImpl
+                .updateFormulaIngredientFromFormula(ingredient, formulaId);
 
-        assertEquals(formulaIngredient, formulaIngredientToFormula);
+        assertNotNull(result);
+        assertEquals(ingredient, result);
+        verify(formulaIngredientRepository, times(1)).save(ingredient);
 
     }
 
     @Test
     public void testThatUpdateIngredientsToFormulaThatNotExists() {
         Long formulaId = 1L;
-        Long IngredientFormulaId = 2L;
-
-        FormulaIngredient formulaIngredient = new FormulaIngredient();
-        formulaIngredient.setId(IngredientFormulaId);
-
         Formula formula = new Formula();
-        formula.setId(formulaId);
-        Set<FormulaIngredient> formulaIngredients = new HashSet<>();
-        formula.setFormulaIngredients(formulaIngredients);
+
+        FormulaIngredient ingredient = new FormulaIngredient();
+        ingredient.setId(2L);
 
         when(formulaRepository.findById(formulaId)).thenReturn(Optional.of(formula));
 
         assertThrows(RuntimeException.class,
-                () -> formulaIngredientServiceImpl.updateFormulaIngredientFromFormula(formulaIngredient, formulaId));
+                () -> formulaIngredientServiceImpl.updateFormulaIngredientFromFormula(ingredient, formulaId));
+
+        verify(formulaRepository, times(1)).findById(formulaId);
     }
 
     @Test
@@ -124,70 +124,64 @@ public class FormulaIngredientImplTest {
         Long formulaId = 1L;
 
         Formula formula = new Formula();
-        FormulaIngredient formulaIngredient = new FormulaIngredient();
+        FormulaIngredient ingredient = new FormulaIngredient();
+        ingredient.setId(2l);
 
-        formula.setId(formulaId);
-        formulaIngredient.setId(2l);
-
-        Set<FormulaIngredient> formulaIngredients = new HashSet<>();
-        formulaIngredients.add(formulaIngredient);
-
-        formula.setFormulaIngredients(formulaIngredients);
+        Set<FormulaIngredient> ingredients = new HashSet<>();
+        ingredients.add(ingredient);
+        formula.setFormulaIngredients(ingredients);
 
         when(formulaRepository.findById(formulaId)).thenReturn(Optional.of(formula));
         when(formulaRepository.save(formula)).thenReturn(formula);
 
-        Formula deleteFormulaIngredient = formulaIngredientServiceImpl.deleteFormulaIngredient(formulaId, 2L);
-
-        assertEquals(formula, deleteFormulaIngredient);
-        assertEquals(formula.getFormulaIngredients().size(), 0);
+        Formula result = formulaIngredientServiceImpl.deleteFormulaIngredient(formulaId, 2L);
+        assertNotNull(result);
+        assertFalse(result.getFormulaIngredients().contains(ingredient));
+        verify(formulaRepository, times(1)).save(formula);
 
     }
 
     @Test
     public void testThatDeleteIngredientFromFormulaThatNotExists() {
         Long formulaId = 1L;
+        Long ingredientId = 2L;
 
         Formula formula = new Formula();
-        FormulaIngredient formulaIngredient = new FormulaIngredient();
-
-        formula.setId(formulaId);
-        formulaIngredient.setId(2l);
-
-        Set<FormulaIngredient> formulaIngredients = new HashSet<>();
-        formulaIngredients.add(formulaIngredient);
-
-        formula.setFormulaIngredients(formulaIngredients);
+        Set<FormulaIngredient> ingredients = new HashSet<>();
+        formula.setFormulaIngredients(ingredients);
 
         when(formulaRepository.findById(formulaId)).thenReturn(Optional.of(formula));
 
-        assertThrows(RuntimeException.class,
-                () -> formulaIngredientServiceImpl.deleteFormulaIngredient(formulaId, 3L));
+        Exception exception = assertThrows(RuntimeException.class, () -> {
+            formulaIngredientServiceImpl.deleteFormulaIngredient(formulaId, ingredientId);
+        });
+
+        assertEquals("FormulaIngredient Id does not found", exception.getMessage());
 
     }
 
     @Test
     public void testThatGetFormulaIngredientFromFormula() {
         Long formulaId = 1L;
+        Long ingredientId = 2L;
 
         Formula formula = new Formula();
-        FormulaIngredient formulaIngredient = new FormulaIngredient();
+        FormulaIngredient ingredient = new FormulaIngredient();
+        ingredient.setId(ingredientId);
 
-        formula.setId(formulaId);
-        formulaIngredient.setId(2l);
+        Set<FormulaIngredient> ingredients = new HashSet<>();
+        ingredients.add(ingredient);
 
-        Set<FormulaIngredient> formulaIngredients = new HashSet<>();
-        formulaIngredients.add(formulaIngredient);
-
-        formula.setFormulaIngredients(formulaIngredients);
+        formula.setFormulaIngredients(ingredients);
 
         when(formulaRepository.findById(formulaId)).thenReturn(Optional.of(formula));
 
-        Optional<FormulaIngredient> formulaIngredientFromFormula = formulaIngredientServiceImpl
-                .getFormulaIngredientFromFormula(formulaId, 2L);
+        Optional<FormulaIngredient> result = formulaIngredientServiceImpl
+                .getFormulaIngredientFromFormula(formulaId, ingredientId);
 
-        assertTrue(formulaIngredientFromFormula.isPresent());
-        assertEquals(formulaIngredientFromFormula.get(), formulaIngredient);
+        assertTrue(result.isPresent());
+        assertEquals(result.get(), ingredient);
+        verify(formulaRepository, times(1)).findById(formulaId);
     }
 
     @Test
@@ -195,41 +189,46 @@ public class FormulaIngredientImplTest {
         Long formulaId = 1L;
         Formula formula = new Formula();
 
-        formula.setId(formulaId);
-        Set<FormulaIngredient> formulaIngredients = new HashSet<>();
-        formula.setFormulaIngredients(formulaIngredients);
+        Set<FormulaIngredient> ingredients = new HashSet<>();
+        formula.setFormulaIngredients(ingredients);
 
         when(formulaRepository.findById(formulaId)).thenReturn(Optional.of(formula));
 
-        Optional<FormulaIngredient> formulaIngredientFromFormula = formulaIngredientServiceImpl
+        Optional<FormulaIngredient> result = formulaIngredientServiceImpl
                 .getFormulaIngredientFromFormula(formulaId, 2L);
 
-        assertTrue(formulaIngredientFromFormula.isEmpty());
+        assertTrue(result.isEmpty());
     }
 
     @Test
     public void testThatFindAllFormulaIngredientsByFormula() {
         Long formulaId = 1L;
-        Long formulaIngredientId = 2L;
 
         Formula formula = new Formula();
-        FormulaIngredient formulaIngredient = new FormulaIngredient();
 
-        formula.setId(formulaId);
-        formulaIngredient.setId(formulaIngredientId);
-
-        Set<FormulaIngredient> formulaIngredients = new HashSet<>();
-        formulaIngredients.add(formulaIngredient);
-
-        formula.setFormulaIngredients(formulaIngredients);
+        Set<FormulaIngredient> ingredients = new HashSet<>();
+        formula.setFormulaIngredients(ingredients);
 
         when(formulaRepository.findById(formulaId)).thenReturn(Optional.of(formula));
 
-        Set<FormulaIngredient> allFormulaIngredientsByFormula = formulaIngredientServiceImpl
+        Set<FormulaIngredient> result = formulaIngredientServiceImpl
                 .findAllFormulaIngredientsByFormula(formulaId);
 
-        assertTrue(allFormulaIngredientsByFormula.size() == 1);
-        assertEquals(formulaIngredient, allFormulaIngredientsByFormula.stream().findFirst().get());
+        assertNotNull(result);
+        assertEquals(ingredients, result);
+    }
+
+    @Test
+    public void testIsFormulaIngredientExists() {
+        // Arrange
+        Long ingredientId = 1L;
+        when(formulaIngredientRepository.existsById(ingredientId)).thenReturn(true);
+
+        // Act
+        boolean exists = formulaIngredientServiceImpl.isFormulaIngredientExists(ingredientId);
+
+        // Assert
+        assertTrue(exists);
     }
 
 }

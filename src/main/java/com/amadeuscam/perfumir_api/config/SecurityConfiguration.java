@@ -1,5 +1,7 @@
 package com.amadeuscam.perfumir_api.config;
 
+import java.util.Arrays;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -15,6 +17,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
 
 import com.amadeuscam.perfumir_api.services.UserService;
 
@@ -33,26 +36,29 @@ public class SecurityConfiguration {
 
         http
                 .csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(request ->
-                                request.requestMatchers(
-                                                "/api/auth/**",
-                                                "/error",
-                                                "/v3/api-docs/**",
-                                                "/swagger-ui/**"
-                                        ).permitAll()
+                .authorizeHttpRequests(request -> request.requestMatchers(
+                        "/api/auth/**",
+                        "/error",
+                        "/v3/api-docs/**",
+                        "/swagger-ui/**").permitAll()
 
-
-//                        .requestMatchers("/api/v1/admin").hasAnyAuthority(Role.ADMIN.name())
-//                        .requestMatchers("/api/v1/user").hasAnyAuthority(Role.USER.name())
-//                        .requestMatchers("/api/v1/ingredient").hasAnyAuthority(Role.USER.name())
-//                        .requestMatchers("/api/v1/dilutions").hasAnyAuthority(Role.USER.name())
-                                        .anyRequest().authenticated()
+                        // .requestMatchers("/api/v1/admin").hasAnyAuthority(Role.ADMIN.name())
+                        // .requestMatchers("/api/v1/user").hasAnyAuthority(Role.USER.name())
+                        // .requestMatchers("/api/v1/ingredient").hasAnyAuthority(Role.USER.name())
+                        // .requestMatchers("/api/v1/dilutions").hasAnyAuthority(Role.USER.name())
+                        .anyRequest().authenticated())
+                .cors(cors -> cors.configurationSource(request -> {
+                    CorsConfiguration configuration = new CorsConfiguration();
+                    configuration.setAllowedOrigins(Arrays.asList("http://localhost:3000", "http://127.0.0.1:3000"));
+                    configuration.setAllowedMethods(Arrays.asList("*"));
+                    configuration.setAllowedHeaders(Arrays.asList("*"));
+                    return configuration;
+                })
 
                 )
                 .sessionManagement(manager -> manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider()).addFilterBefore(
-                        jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class
-                );
+                        jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
 

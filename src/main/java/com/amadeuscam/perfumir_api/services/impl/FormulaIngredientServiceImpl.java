@@ -48,6 +48,24 @@ public class FormulaIngredientServiceImpl implements FormulaIngredientService {
     }
 
     @Override
+    public void addFormulaIngredientsToFormula(List<FormulaIngredient> formulaIngredients,
+            Long formulaID) {
+
+        final Optional<Formula> optionalFormula = formulaRepository.findById(formulaID);
+
+        if (optionalFormula.isPresent()) {
+            formulaIngredients.forEach(d -> {
+                d.setFormula(optionalFormula.get());
+                formulaIngredientRepository.save(d);
+            });
+        } else {
+            new RuntimeException("Formula does not exist");
+        }
+
+         
+    }
+
+    @Override
     public FormulaIngredient updateFormulaIngredientFromFormula(FormulaIngredient formulaIngredient, Long formulaID) {
         final Optional<Formula> optionalFormula = formulaRepository.findById(formulaID);
         return optionalFormula.map(formula -> {

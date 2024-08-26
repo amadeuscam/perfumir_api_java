@@ -1,14 +1,12 @@
 package com.amadeuscam.perfumir_api.dto;
 
-import com.amadeuscam.perfumir_api.entities.Formula;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.util.Date;
+import java.util.Set;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.Date;
-import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -19,5 +17,5 @@ public class ProjectDto {
     private String Name;
     private Date created;
     private Date updated;
-    private Set<FormulaDto> formulas;
+    private Set<FormulaManagementDto> formulasManagement;
 }
