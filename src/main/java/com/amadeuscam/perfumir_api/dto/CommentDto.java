@@ -3,14 +3,14 @@ package com.amadeuscam.perfumir_api.dto;
 import java.util.Date;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+@ToString
 public class CommentDto {
 
     private Long id;

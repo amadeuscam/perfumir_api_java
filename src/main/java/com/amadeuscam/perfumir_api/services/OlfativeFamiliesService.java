@@ -1,15 +1,13 @@
 package com.amadeuscam.perfumir_api.services;
 
-import com.amadeuscam.perfumir_api.entities.Dilution;
-import com.amadeuscam.perfumir_api.entities.Ingredient;
-import com.amadeuscam.perfumir_api.entities.OlfactiveFamilies;
-
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
-public interface OlfativeFamiliesService {
+import com.amadeuscam.perfumir_api.entities.Ingredient;
+import com.amadeuscam.perfumir_api.entities.OlfactiveFamilies;
 
+public interface OlfativeFamiliesService {
 
     OlfactiveFamilies createOlfactiveFamilies(OlfactiveFamilies olfactiveFamilies, Long ingredientId);
 
@@ -18,7 +16,6 @@ public interface OlfativeFamiliesService {
     Ingredient deleteOlfactiveFamilies(Long id, Long ingredientId);
 
     Optional<OlfactiveFamilies> getOlfactiveFamilies(Long id, Long ingredientId);
-
 
     Set<OlfactiveFamilies> getOlfactiveFamiliess(Long ingredientId);
 
