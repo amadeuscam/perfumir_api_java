@@ -1,5 +1,15 @@
 package com.amadeuscam.perfumir_api.services.impl;
 
+import java.util.HashMap;
+import java.util.Objects;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
+
 import com.amadeuscam.perfumir_api.dto.JwtAuthenticationResponse;
 import com.amadeuscam.perfumir_api.dto.RefreshTokenRequest;
 import com.amadeuscam.perfumir_api.dto.SignInRequest;
@@ -9,17 +19,7 @@ import com.amadeuscam.perfumir_api.entities.User;
 import com.amadeuscam.perfumir_api.repository.UserRepository;
 import com.amadeuscam.perfumir_api.services.AuthenticationService;
 import com.amadeuscam.perfumir_api.services.JWTService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
 
-
-import java.util.HashMap;
-import java.util.Objects;
 
 @Service
 @RequiredArgsConstructor
