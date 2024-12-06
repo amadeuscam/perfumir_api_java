@@ -27,7 +27,7 @@ import com.amadeuscam.perfumir_api.services.impl.DilutionServiceImpl;
 @ExtendWith(MockitoExtension.class)
 public class DilutionImplTest {
 
-    
+
     @Mock
     private IngredientRepository ingredientRepository;
     @Mock
@@ -44,6 +44,7 @@ public class DilutionImplTest {
     public void init() {
         testIngredient = TestDataUtil.createTestIngredient(1L, null, null);
         dilution = TestDataUtil.createDilution(1L);
+        System.out.println(dilution);
     }
 
     @Test
@@ -89,10 +90,7 @@ public class DilutionImplTest {
     @Test
     public void testThatGetDilutionsForIngredient() {
         Set<Dilution> dilutions = new HashSet<>();
-        Dilution built = Dilution.builder()
-                .id(2L)
-                .quantity(20)
-                .build();
+        Dilution built = Dilution.builder().id(2L).quantity(20).build();
         dilutions.add(dilution);
         dilutions.add(built);
         testIngredient.setDilutions(dilutions);

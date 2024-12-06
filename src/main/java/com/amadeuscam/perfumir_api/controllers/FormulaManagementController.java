@@ -36,22 +36,17 @@ public class FormulaManagementController {
     }
 
     @GetMapping(value = "{formulaManagement_id}/{project_id}")
-    public ResponseEntity<FormulaManagementDto> getFormulaManagement(
-            @PathVariable Long formulaManagement_id,
-            @PathVariable Long project_id) {
+    public ResponseEntity<FormulaManagementDto> getFormulaManagement(@PathVariable Long formulaManagement_id, @PathVariable Long project_id) {
 
-        FormulaManagement formulaManagement = formulaManagementService.getFormulaManagement(
-                formulaManagement_id, project_id);
+        FormulaManagement formulaManagement = formulaManagementService.getFormulaManagement(formulaManagement_id, project_id);
 
         return new ResponseEntity<>(formulaManagementMapper.mapTo(formulaManagement), HttpStatus.OK);
 
     }
 
     @DeleteMapping(value = "{project_id}/{formulaManagement_id}")
-    public ResponseEntity<FormulaManagementDto> deleteFormulaManagement(
-            @PathVariable Long formulaManagement_id,
-            @PathVariable Long project_id) {
-        
+    public ResponseEntity<FormulaManagementDto> deleteFormulaManagement(@PathVariable Long formulaManagement_id, @PathVariable Long project_id) {
+
         formulaManagementService.deleteFormulaManagement(formulaManagement_id, project_id);
 
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);

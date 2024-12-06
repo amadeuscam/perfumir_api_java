@@ -25,8 +25,7 @@ public class CommentController {
     private final CommentMapper commentMapper;
 
     @PostMapping("{formulaId}")
-    public ResponseEntity<CommentDto> addCommentToFormula(@RequestBody CommentDto commentDto,
-            @PathVariable("formulaId") Long formulaId) {
+    public ResponseEntity<CommentDto> addCommentToFormula(@RequestBody CommentDto commentDto, @PathVariable("formulaId") Long formulaId) {
         System.out.println(commentDto);
         System.out.println(formulaId);
         Comment comment = commentMapper.mapFrom(commentDto);
@@ -36,9 +35,8 @@ public class CommentController {
     }
 
     @DeleteMapping("{formulaId}/{commentId}")
-    public ResponseEntity<CommentDto> deleteCommentFromFormula(@PathVariable Long formulaId,
-            @PathVariable Long commentId) {
-        
+    public ResponseEntity<CommentDto> deleteCommentFromFormula(@PathVariable Long formulaId, @PathVariable Long commentId) {
+
         commentService.deleteComment(commentId, formulaId);
         return new ResponseEntity<>(HttpStatus.OK);
 

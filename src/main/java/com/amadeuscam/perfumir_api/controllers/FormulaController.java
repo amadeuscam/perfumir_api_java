@@ -41,9 +41,7 @@ public class FormulaController {
     private final FormulaManagementMapper formulaManagementMapper;
 
     @GetMapping(value = "{fmanagement_id}/{formula_id}")
-    public ResponseEntity<FormulaDto> getFormulaFromProject(
-            @PathVariable("fmanagement_id") Long fmanagement_id,
-            @PathVariable("formula_id") Long formula_id) {
+    public ResponseEntity<FormulaDto> getFormulaFromProject(@PathVariable("fmanagement_id") Long fmanagement_id, @PathVariable("formula_id") Long formula_id) {
         final Optional<Formula> formula = formulaService.getFormula(fmanagement_id, formula_id);
 
         return formula.map(formula1 -> {
@@ -66,8 +64,7 @@ public class FormulaController {
     }
 
     @PostMapping(value = "add/{fmanagement_id}")
-    public ResponseEntity<FormulaDto> saveFormulaToProject(@PathVariable("fmanagement_id") Long fmanagement_id,
-            @RequestBody FormulaDto formulaDto) {
+    public ResponseEntity<FormulaDto> saveFormulaToProject(@PathVariable("fmanagement_id") Long fmanagement_id, @RequestBody FormulaDto formulaDto) {
         log.warn(fmanagement_id.toString());
         log.warn(FormulaDto.class.toString());
         // log.warn(formulaDto);
@@ -79,8 +76,7 @@ public class FormulaController {
     }
 
     @PutMapping(value = "update/{fmanagement_id}")
-    public ResponseEntity<FormulaDto> updateFormulaFromProject(@PathVariable("fmanagement_id") Long fmanagement_id,
-            @RequestBody FormulaDto formulaDto) {
+    public ResponseEntity<FormulaDto> updateFormulaFromProject(@PathVariable("fmanagement_id") Long fmanagement_id, @RequestBody FormulaDto formulaDto) {
         if (!formulaService.isFormulaExists(formulaDto.getId()) || !projectService.isProjectExists(fmanagement_id)) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
@@ -91,15 +87,15 @@ public class FormulaController {
 
     @DeleteMapping(value = "{fmanagement_id}/{formulaId}")
     @Secured("ADMIN")
-    public ResponseEntity<FormulaManagementDto> deleteFormula(@PathVariable("fmanagement_id") Long fmanagement_id,
-            @PathVariable("formulaId") Long formulaId) {
+    public ResponseEntity<FormulaManagementDto> deleteFormula(@PathVariable("fmanagement_id") Long fmanagement_id, @PathVariable("formulaId") Long formulaId) {
 
         System.out.println(fmanagement_id);
         System.out.println(formulaId);
         System.out.println(formulaService.isFormulaExists(formulaId));
         System.out.println(projectService.isProjectExists(fmanagement_id));
-        // !projectService.isProjectExists(fmanagement_id) queda por implemetar esto para fmanagement no para project
-        if (!formulaService.isFormulaExists(formulaId) ) {
+        // !projectService.isProjectExists(fmanagement_id) queda por implemetar esto para fmanagement no
+        // para project
+        if (!formulaService.isFormulaExists(formulaId)) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         final FormulaManagement fManagement = formulaService.deleteFormula(fmanagement_id, formulaId);

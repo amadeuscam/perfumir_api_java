@@ -12,9 +12,7 @@ import com.amadeuscam.perfumir_api.services.JWTService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -50,12 +48,8 @@ public class AuthenticationServiceImpl implements AuthenticationService {
                 throw new IllegalArgumentException("Email and password can't be null");
             }
 
-            authenticationManager.authenticate(
-                    new UsernamePasswordAuthenticationToken(signInRequest.getEmail(), signInRequest.getPassword())
-            );
-            var user = userRepository.findByEmail(
-                            signInRequest.getEmail())
-                    .orElseThrow(() -> new IllegalArgumentException("Invalid email or pasword"));
+            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(signInRequest.getEmail(), signInRequest.getPassword()));
+            var user = userRepository.findByEmail(signInRequest.getEmail()).orElseThrow(() -> new IllegalArgumentException("Invalid email or pasword"));
 
             var jwt = jwtService.generateToken(user);
             var refreshToken = jwtService.generateRefreshToken(new HashMap<>(), user);
@@ -65,8 +59,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
             jwtAuthenticationResponse.setToken(jwt);
             return jwtAuthenticationResponse;
         } catch (Exception exception) {
-            throw new ResponseStatusException(
-                    HttpStatus.BAD_REQUEST, exception.getMessage());
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, exception.getMessage());
         }
 
     }
@@ -76,8 +69,6 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         User user = userRepository.findByEmail(userEmail).orElseThrow();
         if (jwtService.isTokenValid(refreshTokenRequest.getToken(), user)) {
             var jwt = jwtService.generateToken(user);
-
-
             JwtAuthenticationResponse jwtAuthenticationResponse = new JwtAuthenticationResponse();
             jwtAuthenticationResponse.setRefreshToken(refreshTokenRequest.getToken());
             jwtAuthenticationResponse.setToken(jwt);

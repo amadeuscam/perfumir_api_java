@@ -53,6 +53,7 @@ public class FormulaManagementSerrviceImpl implements FormulaManagementService {
         Optional<Project> projectOptional = projectRepository.findById(projectId);
 
         return projectOptional.map(project -> {
+            
             return project.getFormulasManagement().stream().filter(fm -> fm.getId().equals(formulaId)).findFirst()
                     .get();
         }).orElseThrow(() -> new RuntimeException("Formula Management does not exist"));

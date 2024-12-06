@@ -33,8 +33,8 @@ public class IngredientController {
 
     private final IngredientService ingredientService;
     private final IngredientMapper ingredientMapper;
-  
-    private static Logger logger =  LoggerFactory.getLogger(IngredientController.class);
+
+    private static Logger logger = LoggerFactory.getLogger(IngredientController.class);
 
     @PostMapping
     public ResponseEntity<IngredientDto> createIngredient(@RequestBody IngredientDto ingredientDto) {
@@ -46,7 +46,7 @@ public class IngredientController {
 
     @GetMapping
     public List<IngredientDto> getIngredients() {
-       
+
         logger.info("hola desde info");
         logger.debug("hola desde debug");
         logger.warn("hola desde warm");

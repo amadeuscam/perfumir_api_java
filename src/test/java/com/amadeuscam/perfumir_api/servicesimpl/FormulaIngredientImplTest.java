@@ -94,8 +94,7 @@ public class FormulaIngredientImplTest {
         when(formulaRepository.findById(formulaId)).thenReturn(Optional.of(formula));
         when(formulaIngredientRepository.save(ingredient)).thenReturn(ingredient);
 
-        FormulaIngredient result = formulaIngredientServiceImpl
-                .updateFormulaIngredientFromFormula(ingredient, formulaId);
+        FormulaIngredient result = formulaIngredientServiceImpl.updateFormulaIngredientFromFormula(ingredient, formulaId);
 
         assertNotNull(result);
         assertEquals(ingredient, result);
@@ -113,8 +112,7 @@ public class FormulaIngredientImplTest {
 
         when(formulaRepository.findById(formulaId)).thenReturn(Optional.of(formula));
 
-        assertThrows(RuntimeException.class,
-                () -> formulaIngredientServiceImpl.updateFormulaIngredientFromFormula(ingredient, formulaId));
+        assertThrows(RuntimeException.class, () -> formulaIngredientServiceImpl.updateFormulaIngredientFromFormula(ingredient, formulaId));
 
         verify(formulaRepository, times(1)).findById(formulaId);
     }
@@ -176,8 +174,7 @@ public class FormulaIngredientImplTest {
 
         when(formulaRepository.findById(formulaId)).thenReturn(Optional.of(formula));
 
-        Optional<FormulaIngredient> result = formulaIngredientServiceImpl
-                .getFormulaIngredientFromFormula(formulaId, ingredientId);
+        Optional<FormulaIngredient> result = formulaIngredientServiceImpl.getFormulaIngredientFromFormula(formulaId, ingredientId);
 
         assertTrue(result.isPresent());
         assertEquals(result.get(), ingredient);
@@ -194,8 +191,7 @@ public class FormulaIngredientImplTest {
 
         when(formulaRepository.findById(formulaId)).thenReturn(Optional.of(formula));
 
-        Optional<FormulaIngredient> result = formulaIngredientServiceImpl
-                .getFormulaIngredientFromFormula(formulaId, 2L);
+        Optional<FormulaIngredient> result = formulaIngredientServiceImpl.getFormulaIngredientFromFormula(formulaId, 2L);
 
         assertTrue(result.isEmpty());
     }
@@ -211,8 +207,7 @@ public class FormulaIngredientImplTest {
 
         when(formulaRepository.findById(formulaId)).thenReturn(Optional.of(formula));
 
-        Set<FormulaIngredient> result = formulaIngredientServiceImpl
-                .findAllFormulaIngredientsByFormula(formulaId);
+        Set<FormulaIngredient> result = formulaIngredientServiceImpl.findAllFormulaIngredientsByFormula(formulaId);
 
         assertNotNull(result);
         assertEquals(ingredients, result);

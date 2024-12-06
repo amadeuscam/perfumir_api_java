@@ -59,5 +59,6 @@ public class Formula {
 
     @OneToMany(mappedBy = "formula", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Comment> comments;
+    
 
 }

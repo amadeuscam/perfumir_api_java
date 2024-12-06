@@ -38,20 +38,24 @@ public class OlfativeFamiliesController {
     }
 
     @GetMapping(path = "{ingredientId}/{olfativeId}")
-    public ResponseEntity<OlfactiveFamiliesDto> getOlfativeFamilyFromIngredient(@PathVariable("ingredientId") Long ingredientId, @PathVariable("olfativeId") Long olfativeId) {
+    public ResponseEntity<OlfactiveFamiliesDto> getOlfativeFamilyFromIngredient(@PathVariable("ingredientId") Long ingredientId,
+            @PathVariable("olfativeId") Long olfativeId) {
         Optional<OlfactiveFamilies> olfactiveFamiliesOptional = olfativeFamiliesService.getOlfactiveFamilies(olfativeId, ingredientId);
-        return olfactiveFamiliesOptional.map(olfactiveFamilies -> new ResponseEntity<>(olfactiveFamiliesMapper.mapTo(olfactiveFamilies), HttpStatus.OK)).orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+        return olfactiveFamiliesOptional.map(olfactiveFamilies -> new ResponseEntity<>(olfactiveFamiliesMapper.mapTo(olfactiveFamilies), HttpStatus.OK))
+                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
     @PostMapping(path = "{ingredientId}")
-    public ResponseEntity<OlfactiveFamiliesDto> saveOlfativeFamilyToIngredient(@RequestBody OlfactiveFamiliesDto olfactiveFamiliesDto, @PathVariable("ingredientId") Long ingredientId) {
+    public ResponseEntity<OlfactiveFamiliesDto> saveOlfativeFamilyToIngredient(@RequestBody OlfactiveFamiliesDto olfactiveFamiliesDto,
+            @PathVariable("ingredientId") Long ingredientId) {
         OlfactiveFamilies olfactiveFamilies = olfactiveFamiliesMapper.mapFrom(olfactiveFamiliesDto);
         OlfactiveFamilies olfactiveFamiliesCreated = olfativeFamiliesService.createOlfactiveFamilies(olfactiveFamilies, ingredientId);
         return new ResponseEntity<>(olfactiveFamiliesMapper.mapTo(olfactiveFamiliesCreated), HttpStatus.CREATED);
     }
 
     @PutMapping(path = "{ingredientId}")
-    public ResponseEntity<OlfactiveFamiliesDto> updateOlfativeFamilyFromIngredient(@RequestBody OlfactiveFamiliesDto olfactiveFamiliesDto, @PathVariable("ingredientId") Long ingredientId) {
+    public ResponseEntity<OlfactiveFamiliesDto> updateOlfativeFamilyFromIngredient(@RequestBody OlfactiveFamiliesDto olfactiveFamiliesDto,
+            @PathVariable("ingredientId") Long ingredientId) {
         OlfactiveFamilies olfactiveFamilies = olfactiveFamiliesMapper.mapFrom(olfactiveFamiliesDto);
         OlfactiveFamilies olfactiveFamiliesCreated = olfativeFamiliesService.updateOlfactiveFamilies(olfactiveFamilies, ingredientId);
         return new ResponseEntity<>(olfactiveFamiliesMapper.mapTo(olfactiveFamiliesCreated), HttpStatus.OK);
@@ -59,7 +63,8 @@ public class OlfativeFamiliesController {
 
     @DeleteMapping(path = "{ingredientId}/{olfativeId}")
     @Secured("ADMIN")
-    public ResponseEntity<IngredientDto> deleteOlfativeFamilyFromIngredient(@PathVariable("ingredientId") Long ingredientId, @PathVariable("olfativeId") Long olfativeId) {
+    public ResponseEntity<IngredientDto> deleteOlfativeFamilyFromIngredient(@PathVariable("ingredientId") Long ingredientId,
+            @PathVariable("olfativeId") Long olfativeId) {
         Ingredient ingredient = olfativeFamiliesService.deleteOlfactiveFamilies(olfativeId, ingredientId);
         return new ResponseEntity<>(ingredientMapper.mapTo(ingredient), HttpStatus.OK);
     }

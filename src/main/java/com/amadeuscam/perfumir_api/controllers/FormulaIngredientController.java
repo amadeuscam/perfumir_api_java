@@ -40,8 +40,7 @@ public class FormulaIngredientController {
     @GetMapping(value = "{formulaId}/{ingredientId}")
     public ResponseEntity<FormulaIngredientDto> getIngredientFromFormula(@PathVariable("formulaId") Long formulaId,
             @PathVariable("ingredientId") Long ingredientId) {
-        final Optional<FormulaIngredient> ingredientFromFormula = formulaIngredientService
-                .getFormulaIngredientFromFormula(formulaId, ingredientId);
+        final Optional<FormulaIngredient> ingredientFromFormula = formulaIngredientService.getFormulaIngredientFromFormula(formulaId, ingredientId);
         return ingredientFromFormula.map(ingredient -> {
             final FormulaIngredientDto ingredientDto = formulaIngredientMapper.mapTo(ingredient);
             return new ResponseEntity<>(ingredientDto, HttpStatus.OK);
@@ -56,8 +55,7 @@ public class FormulaIngredientController {
 
     @GetMapping(value = "{formulaId}")
     public List<FormulaIngredientDto> getAllIngredientFromFormula(@PathVariable("formulaId") Long formulaId) {
-        final Set<FormulaIngredient> allFormulaIngredientsByFormula = formulaIngredientService
-                .findAllFormulaIngredientsByFormula(formulaId);
+        final Set<FormulaIngredient> allFormulaIngredientsByFormula = formulaIngredientService.findAllFormulaIngredientsByFormula(formulaId);
         return allFormulaIngredientsByFormula.stream().map(formulaIngredientMapper::mapTo).collect(Collectors.toList());
     }
 
@@ -65,8 +63,7 @@ public class FormulaIngredientController {
     public ResponseEntity<FormulaIngredientDto> addIngredientToFormula(@PathVariable("formulaId") Long formulaId,
             @RequestBody FormulaIngredientDto formulaIngredientDto) {
         final FormulaIngredient formulaIngredient = formulaIngredientMapper.mapFrom(formulaIngredientDto);
-        final FormulaIngredient toFormula = formulaIngredientService.addFormulaIngredientToFormula(formulaIngredient,
-                formulaId);
+        final FormulaIngredient toFormula = formulaIngredientService.addFormulaIngredientToFormula(formulaIngredient, formulaId);
         return new ResponseEntity<>(formulaIngredientMapper.mapTo(toFormula), HttpStatus.OK);
     }
 
@@ -90,15 +87,13 @@ public class FormulaIngredientController {
             @RequestBody FormulaIngredientDto formulaIngredientDto) {
         final FormulaIngredient formulaIngredient = formulaIngredientMapper.mapFrom(formulaIngredientDto);
 
-        final FormulaIngredient toFormula = formulaIngredientService
-                .updateFormulaIngredientFromFormula(formulaIngredient, formulaId);
+        final FormulaIngredient toFormula = formulaIngredientService.updateFormulaIngredientFromFormula(formulaIngredient, formulaId);
         return new ResponseEntity<>(formulaIngredientMapper.mapTo(toFormula), HttpStatus.OK);
     }
 
     @DeleteMapping("{formulaId}/{ingredientId}")
     @Secured("ADMIN")
-    public ResponseEntity<FormulaDto> deleteIngredientFromFormula(@PathVariable("formulaId") Long formulaId,
-            @PathVariable("ingredientId") Long ingredientId) {
+    public ResponseEntity<FormulaDto> deleteIngredientFromFormula(@PathVariable("formulaId") Long formulaId, @PathVariable("ingredientId") Long ingredientId) {
 
         final Formula formula = formulaIngredientService.deleteFormulaIngredient(formulaId, ingredientId);
         return new ResponseEntity<>(formulaMapper.mapTo(formula), HttpStatus.NOT_FOUND);
