@@ -19,6 +19,7 @@ import com.amadeuscam.perfumir_api.entities.User;
 import com.amadeuscam.perfumir_api.repository.UserRepository;
 import com.amadeuscam.perfumir_api.services.AuthenticationService;
 import com.amadeuscam.perfumir_api.services.JWTService;
+import lombok.RequiredArgsConstructor;
 
 
 @Service

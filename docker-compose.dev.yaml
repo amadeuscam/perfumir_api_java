@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  db:
+    restart: always
+    image: postgres:12
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: $SQL_DATABASE
+      POSTGRES_USER: $SQL_USER
+      POSTGRES_PASSWORD: $SQL_PASSWORD
+    volumes:
+      - persistent_go_echo:/var/lib/postgresql/data/
+    networks:
+      - default
+
+  pgadmin:
+    container_name: pgadmin4_perfumes
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "5051:80"
+
+volumes:
+  persistent_go_echo: {}

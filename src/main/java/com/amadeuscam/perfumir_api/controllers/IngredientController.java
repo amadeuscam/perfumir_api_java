@@ -46,11 +46,6 @@ public class IngredientController {
 
     @GetMapping
     public List<IngredientDto> getIngredients() {
-
-        logger.info("hola desde info");
-        logger.debug("hola desde debug");
-        logger.warn("hola desde warm");
-        logger.error("hola desde error");
         final List<Ingredient> ingredientList = ingredientService.findAll();
         return ingredientList.stream().map(ingredientMapper::mapTo).collect(Collectors.toList());
     }
@@ -86,7 +81,7 @@ public class IngredientController {
 
     @DeleteMapping(path = "/{id}")
     @Secured("ADMIN")
-    public ResponseEntity deleteIngredient(@PathVariable("id") Long id) {
+    public ResponseEntity<HttpStatus> deleteIngredient(@PathVariable("id") Long id) {
         if (!ingredientService.isExists(id)) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }

@@ -21,6 +21,12 @@ public class ProjectServiceImpl implements ProjectService {
         return projectRepository.findAll();
     }
 
+    /**
+     * This method saves a project in the database
+     * 
+     * @param project - The project details as an object
+     * @return The saved project object
+     */
     @Override
     public Project createProject(Project project) {
 
@@ -30,6 +36,12 @@ public class ProjectServiceImpl implements ProjectService {
         return projectRepository.save(project);
     }
 
+    /**
+     * Updates a project in the database.
+     * 
+     * @param project - The updated project details
+     * @return The updated project object
+     */
     @Override
     public Project updateProject(Project project) {
 
@@ -39,11 +51,24 @@ public class ProjectServiceImpl implements ProjectService {
         return projectRepository.save(project);
     }
 
+    /**
+     * Retrieves a single project by its ID in the database.
+     * 
+     * @param id - The unique identifier for the project you want to retrieve
+     * @return An Optional object containing the retrieved project
+     */
+
     @Override
     public Optional<Project> getProject(Long id) {
         return projectRepository.findById(id);
     }
 
+    /**
+     * Deletes a specific project from the database based on given project ID.
+     * 
+     * @param id - The unique identifier of the project that needs to be deleted
+     * @return boolean indicating whether the deletion was successful or not
+     */
     @Override
     public void deleteProject(Long id) {
         projectRepository.deleteById(id);

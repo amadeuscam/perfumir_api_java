@@ -14,7 +14,7 @@ public interface RecognitionService {
 
     void deleteRecognitions(Long id);
 
-    Recognition addRecognition(Recognition recognition);
+    void addRecognition(List<Recognition> recognitions);
 
     Map<LocalDate, List<Recognition>> getRecognitionsGroupedByDate();
 

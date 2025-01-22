@@ -1,0 +1,4395 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"for",
+				"fore\tfor (each)"
+			],
+			[
+				"set",
+				"setVersion(String version) : void"
+			],
+			[
+				"get",
+				"get() : FormulaManagement"
+			],
+			[
+				"is",
+				"isPresent() : boolean"
+			],
+			[
+				"gert",
+				"getVersion() : String"
+			],
+			[
+				"fo",
+				"formulaManagement"
+			],
+			[
+				"proje",
+				"projectOptional"
+			],
+			[
+				"rou",
+				"router"
+			],
+			[
+				"c",
+				"click"
+			],
+			[
+				"fil",
+				"filteredList"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"pri",
+				"println() : void"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"se",
+				"self"
+			],
+			[
+				"subl",
+				"sublime"
+			],
+			[
+				"de",
+				"def"
+			],
+			[
+				"if",
+				"if"
+			],
+			[
+				"s",
+				"script"
+			],
+			[
+				"e",
+				"timeout"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/main/java/com/amadeuscam/perfumir_api/controllers/RecognitionController.java",
+			"settings":
+			{
+				"buffer_size": 2171,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			},
+			"undo_stack":
+			[
+				[
+					12,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAADcDAAAAAAAAOAMAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAA3AwAAAAAAADcDAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					15,
+					1,
+					"insert",
+					{
+						"characters": "                 "
+					},
+					"EQAAADgDAAAAAAAAOQMAAAAAAAAAAAAAOQMAAAAAAAA6AwAAAAAAAAAAAAA6AwAAAAAAADsDAAAAAAAAAAAAADsDAAAAAAAAPAMAAAAAAAAAAAAAPAMAAAAAAAA9AwAAAAAAAAAAAAA9AwAAAAAAAD4DAAAAAAAAAAAAAD4DAAAAAAAAPwMAAAAAAAAAAAAAPwMAAAAAAABAAwAAAAAAAAAAAABAAwAAAAAAAEEDAAAAAAAAAAAAAEEDAAAAAAAAQgMAAAAAAAAAAAAAQgMAAAAAAABDAwAAAAAAAAAAAABDAwAAAAAAAEQDAAAAAAAAAAAAAEQDAAAAAAAARQMAAAAAAAAAAAAARQMAAAAAAABGAwAAAAAAAAAAAABGAwAAAAAAAEcDAAAAAAAAAAAAAEcDAAAAAAAASAMAAAAAAAAAAAAASAMAAAAAAABJAwAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAA4AwAAAAAAADgDAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					17,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": "",
+								"range":
+								{
+									"end":
+									{
+										"character": 61,
+										"line": 24
+									},
+									"start":
+									{
+										"character": 43,
+										"line": 24
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": null
+					},
+					"AQAAADcDAAAAAAAANwMAAAAAAAASAAAAICAgICAgICAgICAgICAgICAg",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABJAwAAAAAAAEkDAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					39,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAJoBAAAAAAAAmwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAmgEAAAAAAACaAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					41,
+					1,
+					"paste",
+					null,
+					"AQAAAJsBAAAAAAAAvgEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAmwEAAAAAAACbAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					53,
+					1,
+					"paste",
+					null,
+					"AgAAALQBAAAAAAAAwAEAAAAAAAAAAAAAwAEAAAAAAADAAQAAAAAAAAgAAABwcm9qZWN0cw",
+					"AQAAAAAAAAABAAAAtAEAAAAAAAC8AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					59,
+					1,
+					"left_delete",
+					null,
+					"AQAAACUDAAAAAAAAJQMAAAAAAAAMAAAAcmVjb2duaXRpb25z",
+					"AQAAAAAAAAABAAAAJQMAAAAAAAAxAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					64,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AgAAAAMEAAAAAAAABAQAAAAAAAAAAAAABAQAAAAAAAAEBAAAAAAAAA0AAAByZWNvZ25pdGlvbnMv",
+					"AQAAAAAAAAABAAAAEAQAAAAAAAADBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					67,
+					1,
+					"left_delete",
+					null,
+					"AQAAAAMEAAAAAAAAAwQAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAABAQAAAAAAAAEBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					80,
+					1,
+					"left_delete",
+					null,
+					"AQAAAAoFAAAAAAAACgUAAAAAAAAMAAAAcmVjb2duaXRpb25z",
+					"AQAAAAAAAAABAAAACgUAAAAAAAAWBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					85,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AgAAAAQGAAAAAAAABQYAAAAAAAAAAAAABQYAAAAAAAAFBgAAAAAAAA0AAAByZWNvZ25pdGlvbnMv",
+					"AQAAAAAAAAABAAAAEQYAAAAAAAAEBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					89,
+					1,
+					"left_delete",
+					null,
+					"AQAAAAQGAAAAAAAABAYAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAABQYAAAAAAAAFBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					155,
+					1,
+					"insert",
+					{
+						"characters": "<"
+					},
+					"AQAAAEgFAAAAAAAASQUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASAUAAAAAAABIBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					157,
+					1,
+					"left_delete",
+					null,
+					"AQAAAEgFAAAAAAAASAUAAAAAAAABAAAAPA",
+					"AQAAAAAAAAABAAAASQUAAAAAAABJBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					159,
+					1,
+					"insert",
+					{
+						"characters": "L"
+					},
+					"AQAAAEgFAAAAAAAASQUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASAUAAAAAAABIBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					161,
+					1,
+					"insert",
+					{
+						"characters": "ist<"
+					},
+					"BAAAAEkFAAAAAAAASgUAAAAAAAAAAAAASgUAAAAAAABLBQAAAAAAAAAAAABLBQAAAAAAAEwFAAAAAAAAAAAAAEwFAAAAAAAATQUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASQUAAAAAAABJBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					165,
+					1,
+					"insert",
+					{
+						"characters": ">"
+					},
+					"AQAAAFgFAAAAAAAAWQUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAWAUAAAAAAABYBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					168,
+					1,
+					"insert",
+					{
+						"characters": "s"
+					},
+					"AQAAAGUFAAAAAAAAZgUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAZQUAAAAAAABlBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					182,
+					1,
+					"paste",
+					null,
+					"AgAAAK0FAAAAAAAAuQUAAAAAAAAAAAAAuQUAAAAAAAC5BQAAAAAAAAsAAAByZWNvZ25pdGlvbg",
+					"AQAAAAAAAAABAAAArQUAAAAAAAC4BQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					347,
+					1,
+					"cut",
+					null,
+					"AQAAAIsFAAAAAAAAiwUAAAAAAAAvAAAAcmVjb2duaXRpb25TZXJ2aWNlLmFkZFJlY29nbml0aW9uKHJlY29nbml0aW9ucyk",
+					"AQAAAAAAAAABAAAAugUAAAAAAACLBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					351,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AwAAAGkFAAAAAAAAagUAAAAAAAAAAAAAagUAAAAAAABuBQAAAAAAAAAAAABuBQAAAAAAAHIFAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAaQUAAAAAAABpBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					353,
+					1,
+					"paste",
+					null,
+					"AQAAAHIFAAAAAAAAoQUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcgUAAAAAAAByBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					355,
+					1,
+					"insert",
+					{
+						"characters": ";"
+					},
+					"AQAAAKEFAAAAAAAAogUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAoQUAAAAAAAChBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					379,
+					1,
+					"insert",
+					{
+						"characters": "?"
+					},
+					"AgAAACcFAAAAAAAAKAUAAAAAAAAAAAAAKAUAAAAAAAAoBQAAAAAAAAsAAABSZWNvZ25pdGlvbg",
+					"AQAAAAAAAAABAAAAJwUAAAAAAAAyBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					394,
+					1,
+					"insert",
+					{
+						"characters": "new"
+					},
+					"BAAAAKgFAAAAAAAAqQUAAAAAAAAAAAAAqQUAAAAAAACpBQAAAAAAABQAAABSZXNwb25zZUVudGl0eS5vaygpO6kFAAAAAAAAqgUAAAAAAAAAAAAAqgUAAAAAAACrBQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvAUAAAAAAACoBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					395,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAKsFAAAAAAAArAUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqwUAAAAAAACrBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					397,
+					1,
+					"insert_completion",
+					{
+						"completion": "lsp_select_completion {\"index\":0,\"session_name\":\"jdtls\"}",
+						"format": "command",
+						"keep_prefix": true,
+						"must_insert": true,
+						"query_change_id":
+						[
+							196,
+							395,
+							1
+						],
+						"trigger": "ResponseEntity"
+					},
+					"AgAAAKgFAAAAAAAAqAUAAAAAAAAEAAAAbmV3IKgFAAAAAAAAtgUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAArAUAAAAAAACsBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					399,
+					1,
+					"insert",
+					{
+						"characters": "<>"
+					},
+					"AgAAALYFAAAAAAAAtwUAAAAAAAAAAAAAtwUAAAAAAAC4BQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtgUAAAAAAAC2BQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					405,
+					1,
+					"insert_snippet",
+					{
+						"contents": "($0)"
+					},
+					"AQAAALgFAAAAAAAAugUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAuAUAAAAAAAC4BQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					409,
+					1,
+					"insert_snippet",
+					{
+						"contents": "\"$0\""
+					},
+					"AQAAALkFAAAAAAAAuwUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAuQUAAAAAAAC5BQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					411,
+					1,
+					"insert",
+					{
+						"characters": "s"
+					},
+					"AQAAALoFAAAAAAAAuwUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAugUAAAAAAAC6BQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					413,
+					1,
+					"insert",
+					{
+						"characters": "UCCESS"
+					},
+					"BgAAALsFAAAAAAAAvAUAAAAAAAAAAAAAvAUAAAAAAAC9BQAAAAAAAAAAAAC9BQAAAAAAAL4FAAAAAAAAAAAAAL4FAAAAAAAAvwUAAAAAAAAAAAAAvwUAAAAAAADABQAAAAAAAAAAAADABQAAAAAAAMEFAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAuwUAAAAAAAC7BQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					416,
+					1,
+					"insert",
+					{
+						"characters": ",."
+					},
+					"AgAAAMIFAAAAAAAAwwUAAAAAAAAAAAAAwwUAAAAAAADEBQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAwgUAAAAAAADCBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					417,
+					1,
+					"left_delete",
+					null,
+					"AQAAAMMFAAAAAAAAwwUAAAAAAAABAAAALg",
+					"AQAAAAAAAAABAAAAxAUAAAAAAADEBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					418,
+					1,
+					"insert",
+					{
+						"characters": "hTTP"
+					},
+					"BAAAAMMFAAAAAAAAxAUAAAAAAAAAAAAAxAUAAAAAAADFBQAAAAAAAAAAAADFBQAAAAAAAMYFAAAAAAAAAAAAAMYFAAAAAAAAxwUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAwwUAAAAAAADDBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					419,
+					4,
+					"left_delete",
+					null,
+					"BAAAAMYFAAAAAAAAxgUAAAAAAAABAAAAUMUFAAAAAAAAxQUAAAAAAAABAAAAVMQFAAAAAAAAxAUAAAAAAAABAAAAVMMFAAAAAAAAwwUAAAAAAAABAAAAaA",
+					"AQAAAAAAAAABAAAAxwUAAAAAAADHBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					420,
+					1,
+					"insert",
+					{
+						"characters": "H"
+					},
+					"AQAAAMMFAAAAAAAAxAUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAwwUAAAAAAADDBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					422,
+					1,
+					"insert",
+					{
+						"characters": "ttps"
+					},
+					"BAAAAMQFAAAAAAAAxQUAAAAAAAAAAAAAxQUAAAAAAADGBQAAAAAAAAAAAADGBQAAAAAAAMcFAAAAAAAAAAAAAMcFAAAAAAAAyAUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAxAUAAAAAAADEBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					423,
+					1,
+					"left_delete",
+					null,
+					"AQAAAMcFAAAAAAAAxwUAAAAAAAABAAAAcw",
+					"AQAAAAAAAAABAAAAyAUAAAAAAADIBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					424,
+					1,
+					"insert",
+					{
+						"characters": "status."
+					},
+					"BwAAAMcFAAAAAAAAyAUAAAAAAAAAAAAAyAUAAAAAAADJBQAAAAAAAAAAAADJBQAAAAAAAMoFAAAAAAAAAAAAAMoFAAAAAAAAywUAAAAAAAAAAAAAywUAAAAAAADMBQAAAAAAAAAAAADMBQAAAAAAAM0FAAAAAAAAAAAAAM0FAAAAAAAAzgUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAxwUAAAAAAADHBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					426,
+					1,
+					"left_delete",
+					null,
+					"AQAAAM0FAAAAAAAAzQUAAAAAAAABAAAALg",
+					"AQAAAAAAAAABAAAAzgUAAAAAAADOBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					428,
+					7,
+					"left_delete",
+					null,
+					"BwAAAMwFAAAAAAAAzAUAAAAAAAABAAAAc8sFAAAAAAAAywUAAAAAAAABAAAAdcoFAAAAAAAAygUAAAAAAAABAAAAdMkFAAAAAAAAyQUAAAAAAAABAAAAYcgFAAAAAAAAyAUAAAAAAAABAAAAdMcFAAAAAAAAxwUAAAAAAAABAAAAc8YFAAAAAAAAxgUAAAAAAAABAAAAcA",
+					"AQAAAAAAAAABAAAAzQUAAAAAAADNBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					436,
+					1,
+					"paste",
+					null,
+					"AgAAAMMFAAAAAAAAzQUAAAAAAAAAAAAAzQUAAAAAAADNBQAAAAAAAAMAAABIdHQ",
+					"AQAAAAAAAAABAAAAwwUAAAAAAADGBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					438,
+					1,
+					"insert",
+					{
+						"characters": ".c"
+					},
+					"AgAAAM0FAAAAAAAAzgUAAAAAAAAAAAAAzgUAAAAAAADPBQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzQUAAAAAAADNBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					440,
+					3,
+					"left_delete",
+					null,
+					"AwAAAM4FAAAAAAAAzgUAAAAAAAABAAAAY80FAAAAAAAAzQUAAAAAAAABAAAALswFAAAAAAAAzAUAAAAAAAABAAAAcw",
+					"AQAAAAAAAAABAAAAzwUAAAAAAADPBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					441,
+					1,
+					"insert",
+					{
+						"characters": "s"
+					},
+					"AQAAAMwFAAAAAAAAzQUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzAUAAAAAAADMBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					443,
+					1,
+					"insert",
+					{
+						"characters": "."
+					},
+					"AQAAAM0FAAAAAAAAzgUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzQUAAAAAAADNBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					449,
+					1,
+					"left_delete",
+					null,
+					"AQAAAM0FAAAAAAAAzQUAAAAAAAABAAAALg",
+					"AQAAAAAAAAABAAAAzgUAAAAAAADOBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					451,
+					1,
+					"insert",
+					{
+						"characters": ",."
+					},
+					"AgAAAM0FAAAAAAAAzgUAAAAAAAAAAAAAzgUAAAAAAADPBQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzQUAAAAAAADNBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					452,
+					2,
+					"left_delete",
+					null,
+					"AgAAAM4FAAAAAAAAzgUAAAAAAAABAAAALs0FAAAAAAAAzQUAAAAAAAABAAAALA",
+					"AQAAAAAAAAABAAAAzwUAAAAAAADPBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					453,
+					1,
+					"insert",
+					{
+						"characters": "."
+					},
+					"AQAAAM0FAAAAAAAAzgUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzQUAAAAAAADNBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					455,
+					1,
+					"insert",
+					{
+						"characters": "c"
+					},
+					"AQAAAM4FAAAAAAAAzwUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzgUAAAAAAADOBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					457,
+					1,
+					"left_delete",
+					null,
+					"AQAAAM4FAAAAAAAAzgUAAAAAAAABAAAAYw",
+					"AQAAAAAAAAABAAAAzwUAAAAAAADPBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					459,
+					1,
+					"insert",
+					{
+						"characters": "C"
+					},
+					"AQAAAM4FAAAAAAAAzwUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzgUAAAAAAADOBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					461,
+					1,
+					"insert",
+					{
+						"characters": "reat"
+					},
+					"BAAAAM8FAAAAAAAA0AUAAAAAAAAAAAAA0AUAAAAAAADRBQAAAAAAAAAAAADRBQAAAAAAANIFAAAAAAAAAAAAANIFAAAAAAAA0wUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzwUAAAAAAADPBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					462,
+					1,
+					"insert",
+					{
+						"characters": "ed"
+					},
+					"AgAAANMFAAAAAAAA1AUAAAAAAAAAAAAA1AUAAAAAAADVBQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA0wUAAAAAAADTBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					482,
+					1,
+					"paste",
+					null,
+					"AgAAAKgFAAAAAAAA0gUAAAAAAAAAAAAA0gUAAAAAAADSBQAAAAAAAC4AAABSZXNwb25zZUVudGl0eTw+KCJzVUNDRVNTIixIdHRwU3RhdHVzLkNyZWF0ZWQp",
+					"AQAAAAAAAAABAAAA1gUAAAAAAACoBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					488,
+					1,
+					"insert",
+					{
+						"characters": "C"
+					},
+					"AgAAAMgFAAAAAAAAyQUAAAAAAAAAAAAAyQUAAAAAAADJBQAAAAAAAAkAAABOT1RfRk9VTkQ",
+					"AQAAAAAAAAABAAAAyAUAAAAAAADRBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					490,
+					1,
+					"insert",
+					{
+						"characters": "REATED"
+					},
+					"BgAAAMkFAAAAAAAAygUAAAAAAAAAAAAAygUAAAAAAADLBQAAAAAAAAAAAADLBQAAAAAAAMwFAAAAAAAAAAAAAMwFAAAAAAAAzQUAAAAAAAAAAAAAzQUAAAAAAADOBQAAAAAAAAAAAADOBQAAAAAAAM8FAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAyQUAAAAAAADJBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					500,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": "import java.time.LocalDate;\r\nimport java.util.List;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.http.ResponseEntity;\r\nimport org.springframework.web.bind.annotation.DeleteMapping;\r\nimport org.springframework.web.bind.annotation.GetMapping;\r\nimport org.springframework.web.bind.annotation.PathVariable;\r\nimport org.springframework.web.bind.annotation.PostMapping;\r\nimport org.springframework.web.bind.annotation.RequestBody;\r\nimport org.springframework.web.bind.annotation.RequestMapping;\r\nimport org.springframework.web.bind.annotation.RestController;\r\nimport com.amadeuscam.perfumir_api.entities.Recognition;\r\nimport com.amadeuscam.perfumir_api.services.impl.RecognitionServiceImpl;",
+								"range":
+								{
+									"end":
+									{
+										"character": 72,
+										"line": 10
+									},
+									"start":
+									{
+										"character": 0,
+										"line": 2
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": null
+					},
+					"AQAAADIAAAAAAAAAAQMAAAAAAABXAQAAaW1wb3J0IG9yZy5zcHJpbmdmcmFtZXdvcmsuYmVhbnMuZmFjdG9yeS5hbm5vdGF0aW9uLkF1dG93aXJlZDsKaW1wb3J0IG9yZy5zcHJpbmdmcmFtZXdvcmsuaHR0cC5SZXNwb25zZUVudGl0eTsKaW1wb3J0IG9yZy5zcHJpbmdmcmFtZXdvcmsud2ViLmJpbmQuYW5ub3RhdGlvbi4qOwoKaW1wb3J0IGphdmEudGltZS5Mb2NhbERhdGU7CmltcG9ydCBqYXZhLnV0aWwuTGlzdDsKCmltcG9ydCBjb20uYW1hZGV1c2NhbS5wZXJmdW1pcl9hcGkuZW50aXRpZXMuUmVjb2duaXRpb247CmltcG9ydCBjb20uYW1hZGV1c2NhbS5wZXJmdW1pcl9hcGkuc2VydmljZXMuaW1wbC5SZWNvZ25pdGlvblNlcnZpY2VJbXBsOw",
+					"AQAAAAAAAAABAAAA0AUAAAAAAADQBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					510,
+					1,
+					"left_delete",
+					null,
+					"AQAAAD4HAAAAAAAAPgcAAAAAAAABAAAAcw",
+					"AQAAAAAAAAABAAAAPwcAAAAAAAA/BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					511,
+					1,
+					"insert",
+					{
+						"characters": "S"
+					},
+					"AQAAAD4HAAAAAAAAPwcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPgcAAAAAAAA+BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					513,
+					1,
+					"left_delete",
+					null,
+					"AQAAAD4HAAAAAAAAPgcAAAAAAAABAAAAUw",
+					"AQAAAAAAAAABAAAAPwcAAAAAAAA/BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					515,
+					1,
+					"insert",
+					{
+						"characters": "S"
+					},
+					"AQAAAD4HAAAAAAAAPwcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPgcAAAAAAAA+BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					517,
+					1,
+					"left_delete",
+					null,
+					"AQAAAD4HAAAAAAAAPgcAAAAAAAABAAAAUw",
+					"AQAAAAAAAAABAAAAPwcAAAAAAAA/BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					518,
+					1,
+					"insert",
+					{
+						"characters": "s"
+					},
+					"AQAAAD4HAAAAAAAAPwcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPgcAAAAAAAA+BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					544,
+					3,
+					"left_delete",
+					null,
+					"AwAAAEAHAAAAAAAAQAcAAAAAAAAHAAAAQ1JFQVRFRD8HAAAAAAAAPwcAAAAAAAABAAAALj4HAAAAAAAAPgcAAAAAAAABAAAAcw",
+					"AQAAAAAAAAABAAAAQAcAAAAAAABHBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					545,
+					1,
+					"insert",
+					{
+						"characters": "s"
+					},
+					"AQAAAD4HAAAAAAAAPwcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPgcAAAAAAAA+BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					548,
+					1,
+					"insert_completion",
+					{
+						"completion": "lsp_select_completion {\"index\":1,\"session_name\":\"jdtls\"}",
+						"format": "command",
+						"keep_prefix": true,
+						"must_insert": false,
+						"query_change_id":
+						[
+							265,
+							545,
+							1
+						],
+						"trigger": "HttpStatus"
+					},
+					"AgAAADUHAAAAAAAANQcAAAAAAAAKAAAASHR0cFN0YXR1czUHAAAAAAAAPwcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPwcAAAAAAAA/BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					549,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": "\r\nimport org.springframework.http.HttpStatus;",
+								"range":
+								{
+									"end":
+									{
+										"character": 62,
+										"line": 4
+									},
+									"start":
+									{
+										"character": 62,
+										"line": 4
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": null
+					},
+					"AQAAAKMAAAAAAAAAzwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPwcAAAAAAAA/BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					551,
+					1,
+					"insert",
+					{
+						"characters": "."
+					},
+					"AQAAAGsHAAAAAAAAbAcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAawcAAAAAAABrBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					553,
+					1,
+					"insert",
+					{
+						"characters": "re"
+					},
+					"AgAAAGwHAAAAAAAAbQcAAAAAAAAAAAAAbQcAAAAAAABuBwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbAcAAAAAAABsBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					554,
+					2,
+					"left_delete",
+					null,
+					"AgAAAG0HAAAAAAAAbQcAAAAAAAABAAAAZWwHAAAAAAAAbAcAAAAAAAABAAAAcg",
+					"AQAAAAAAAAABAAAAbgcAAAAAAABuBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					555,
+					1,
+					"insert",
+					{
+						"characters": "CREAT"
+					},
+					"BQAAAGwHAAAAAAAAbQcAAAAAAAAAAAAAbQcAAAAAAABuBwAAAAAAAAAAAABuBwAAAAAAAG8HAAAAAAAAAAAAAG8HAAAAAAAAcAcAAAAAAAAAAAAAcAcAAAAAAABxBwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbAcAAAAAAABsBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					556,
+					7,
+					"left_delete",
+					null,
+					"BwAAAHAHAAAAAAAAcAcAAAAAAAABAAAAVG8HAAAAAAAAbwcAAAAAAAABAAAAQW4HAAAAAAAAbgcAAAAAAAABAAAARW0HAAAAAAAAbQcAAAAAAAABAAAAUmwHAAAAAAAAbAcAAAAAAAABAAAAQ2sHAAAAAAAAawcAAAAAAAABAAAALmoHAAAAAAAAagcAAAAAAAABAAAAcw",
+					"AQAAAAAAAAABAAAAcQcAAAAAAABxBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					557,
+					1,
+					"insert",
+					{
+						"characters": "S"
+					},
+					"AQAAAGoHAAAAAAAAawcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAagcAAAAAAABqBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					558,
+					1,
+					"left_delete",
+					null,
+					"AQAAAGoHAAAAAAAAagcAAAAAAAABAAAAUw",
+					"AQAAAAAAAAABAAAAawcAAAAAAABrBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					559,
+					1,
+					"insert",
+					{
+						"characters": "s."
+					},
+					"AgAAAGoHAAAAAAAAawcAAAAAAAAAAAAAawcAAAAAAABsBwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAagcAAAAAAABqBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					567,
+					1,
+					"insert",
+					{
+						"characters": "c"
+					},
+					"AQAAAGwHAAAAAAAAbQcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbAcAAAAAAABsBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					569,
+					2,
+					"left_delete",
+					null,
+					"AgAAAGwHAAAAAAAAbAcAAAAAAAABAAAAY2sHAAAAAAAAawcAAAAAAAABAAAALg",
+					"AQAAAAAAAAABAAAAbQcAAAAAAABtBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					570,
+					1,
+					"insert",
+					{
+						"characters": "."
+					},
+					"AQAAAGsHAAAAAAAAbAcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAawcAAAAAAABrBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					580,
+					1,
+					"insert",
+					{
+						"characters": "c"
+					},
+					"AQAAAGwHAAAAAAAAbQcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbAcAAAAAAABsBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					582,
+					1,
+					"left_delete",
+					null,
+					"AQAAAGwHAAAAAAAAbAcAAAAAAAABAAAAYw",
+					"AQAAAAAAAAABAAAAbQcAAAAAAABtBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					584,
+					1,
+					"insert",
+					{
+						"characters": "C"
+					},
+					"AQAAAGwHAAAAAAAAbQcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbAcAAAAAAABsBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					586,
+					1,
+					"insert",
+					{
+						"characters": "REATED"
+					},
+					"BgAAAG0HAAAAAAAAbgcAAAAAAAAAAAAAbgcAAAAAAABvBwAAAAAAAAAAAABvBwAAAAAAAHAHAAAAAAAAAAAAAHAHAAAAAAAAcQcAAAAAAAAAAAAAcQcAAAAAAAByBwAAAAAAAAAAAAByBwAAAAAAAHMHAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbQcAAAAAAABtBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					614,
+					1,
+					"insert",
+					{
+						"characters": ";"
+					},
+					"AQAAAHQHAAAAAAAAdQcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdAcAAAAAAAB0BwAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "src/main/java/com/amadeuscam/perfumir_api/controllers/ProjectController.java",
+			"settings":
+			{
+				"buffer_size": 3056,
+				"line_ending": "Windows"
+			},
+			"undo_stack":
+			[
+			]
+		},
+		{
+			"file": "src/main/java/com/amadeuscam/perfumir_api/services/RecognitionService.java",
+			"settings":
+			{
+				"buffer_size": 498,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			},
+			"undo_stack":
+			[
+				[
+					11,
+					1,
+					"insert",
+					{
+						"characters": "<"
+					},
+					"AQAAAI4BAAAAAAAAjwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjgEAAAAAAACOAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					14,
+					1,
+					"left_delete",
+					null,
+					"AQAAAI4BAAAAAAAAjgEAAAAAAAABAAAAPA",
+					"AQAAAAAAAAABAAAAjwEAAAAAAACPAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					16,
+					1,
+					"insert",
+					{
+						"characters": "L"
+					},
+					"AQAAAI4BAAAAAAAAjwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjgEAAAAAAACOAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					18,
+					1,
+					"insert",
+					{
+						"characters": "isty"
+					},
+					"BAAAAI8BAAAAAAAAkAEAAAAAAAAAAAAAkAEAAAAAAACRAQAAAAAAAAAAAACRAQAAAAAAAJIBAAAAAAAAAAAAAJIBAAAAAAAAkwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjwEAAAAAAACPAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					19,
+					1,
+					"left_delete",
+					null,
+					"AQAAAJIBAAAAAAAAkgEAAAAAAAABAAAAeQ",
+					"AQAAAAAAAAABAAAAkwEAAAAAAACTAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					21,
+					1,
+					"insert",
+					{
+						"characters": "<"
+					},
+					"AQAAAJIBAAAAAAAAkwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAkgEAAAAAAACSAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					24,
+					1,
+					"insert",
+					{
+						"characters": ">"
+					},
+					"AQAAAJ4BAAAAAAAAnwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAngEAAAAAAACeAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					27,
+					1,
+					"insert",
+					{
+						"characters": "s"
+					},
+					"AQAAAKsBAAAAAAAArAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqwEAAAAAAACrAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					62,
+					1,
+					"insert",
+					{
+						"characters": "v"
+					},
+					"AgAAAHMBAAAAAAAAdAEAAAAAAAAAAAAAdAEAAAAAAAB0AQAAAAAAAAsAAABSZWNvZ25pdGlvbg",
+					"AQAAAAAAAAABAAAAcwEAAAAAAAB+AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					64,
+					1,
+					"insert",
+					{
+						"characters": "oid"
+					},
+					"AwAAAHQBAAAAAAAAdQEAAAAAAAAAAAAAdQEAAAAAAAB2AQAAAAAAAAAAAAB2AQAAAAAAAHcBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdAEAAAAAAAB0AQAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "src/main/java/com/amadeuscam/perfumir_api/services/impl/RecognitionServiceImpl.java",
+			"settings":
+			{
+				"buffer_size": 2744,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			},
+			"undo_stack":
+			[
+				[
+					41,
+					1,
+					"insert",
+					{
+						"characters": "<"
+					},
+					"AQAAAI8HAAAAAAAAkAcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjwcAAAAAAACPBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					45,
+					1,
+					"left_delete",
+					null,
+					"AQAAAI8HAAAAAAAAjwcAAAAAAAABAAAAPA",
+					"AQAAAAAAAAABAAAAkAcAAAAAAACQBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					47,
+					1,
+					"insert",
+					{
+						"characters": "L"
+					},
+					"AQAAAI8HAAAAAAAAkAcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjwcAAAAAAACPBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					49,
+					1,
+					"insert",
+					{
+						"characters": "is"
+					},
+					"AgAAAJAHAAAAAAAAkQcAAAAAAAAAAAAAkQcAAAAAAACSBwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAkAcAAAAAAACQBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					51,
+					1,
+					"insert",
+					{
+						"characters": "t"
+					},
+					"AQAAAJIHAAAAAAAAkwcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAkgcAAAAAAACSBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					53,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAJMHAAAAAAAAlAcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAkwcAAAAAAACTBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					56,
+					4,
+					"left_delete",
+					null,
+					"BAAAAJIHAAAAAAAAkgcAAAAAAAABAAAAdJEHAAAAAAAAkQcAAAAAAAABAAAAc5AHAAAAAAAAkAcAAAAAAAABAAAAaY8HAAAAAAAAjwcAAAAAAAABAAAATA",
+					"AQAAAAAAAAABAAAAkwcAAAAAAACTBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					57,
+					1,
+					"insert",
+					{
+						"characters": "Lis"
+					},
+					"AwAAAI8HAAAAAAAAkAcAAAAAAAAAAAAAkAcAAAAAAACRBwAAAAAAAAAAAACRBwAAAAAAAJIHAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjwcAAAAAAACPBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					58,
+					1,
+					"insert_completion",
+					{
+						"completion": "lsp_select_completion {\"index\":2,\"session_name\":\"jdtls\"}",
+						"format": "command",
+						"keep_prefix": true,
+						"must_insert": false,
+						"query_change_id":
+						[
+							32,
+							57,
+							1
+						],
+						"trigger": "List"
+					},
+					"BAAAAJEHAAAAAAAAkQcAAAAAAAABAAAAc5AHAAAAAAAAkAcAAAAAAAABAAAAaY8HAAAAAAAAjwcAAAAAAAABAAAATI8HAAAAAAAAkwcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAkgcAAAAAAACSBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					59,
+					1,
+					"insert",
+					{
+						"characters": "<"
+					},
+					"AQAAAJMHAAAAAAAAlAcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAkwcAAAAAAACTBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					62,
+					1,
+					"left_delete",
+					null,
+					"AQAAAJQHAAAAAAAAlAcAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAlQcAAAAAAACVBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					65,
+					1,
+					"insert",
+					{
+						"characters": ">"
+					},
+					"AQAAAJ8HAAAAAAAAoAcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAnwcAAAAAAACfBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					68,
+					1,
+					"insert",
+					{
+						"characters": "s"
+					},
+					"AQAAAKwHAAAAAAAArQcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAArAcAAAAAAACsBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					84,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"BgAAALAHAAAAAAAAsQcAAAAAAAAAAAAAsQcAAAAAAAC1BwAAAAAAAAAAAAC1BwAAAAAAALkHAAAAAAAAAAAAALkHAAAAAAAAugcAAAAAAAAAAAAAugcAAAAAAADCBwAAAAAAAAAAAACxBwAAAAAAALEHAAAAAAAACAAAACAgICAgICAg",
+					"AQAAAAAAAAABAAAAsAcAAAAAAACwBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					94,
+					1,
+					"reindent",
+					null,
+					"AQAAALEHAAAAAAAAuQcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAsQcAAAAAAACxBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					97,
+					1,
+					"insert",
+					{
+						"characters": "for"
+					},
+					"BAAAALkHAAAAAAAAugcAAAAAAAAAAAAAuwcAAAAAAAC7BwAAAAAAAAgAAAAgICAgICAgILoHAAAAAAAAuwcAAAAAAAAAAAAAuwcAAAAAAAC8BwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAuQcAAAAAAAC5BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					98,
+					1,
+					"insert_completion",
+					{
+						"completion": "for ($1; $2; $3) {\n\t$0\n}",
+						"format": "snippet",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "for"
+					},
+					"AgAAALkHAAAAAAAAuQcAAAAAAAADAAAAZm9yuQcAAAAAAADcBwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvAcAAAAAAAC8BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					103,
+					1,
+					"cut",
+					null,
+					"AQAAALkHAAAAAAAAuQcAAAAAAAAjAAAAZm9yICg7IDsgKSB7CiAgICAgICAgICAgIAogICAgICAgIH0",
+					"AQAAAAAAAAABAAAA3AcAAAAAAAC5BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					112,
+					1,
+					"paste",
+					null,
+					"AQAAALkHAAAAAAAAxQcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAuQcAAAAAAAC5BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					114,
+					1,
+					"insert",
+					{
+						"characters": "."
+					},
+					"AQAAAMUHAAAAAAAAxgcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAxQcAAAAAAADFBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					116,
+					1,
+					"insert",
+					{
+						"characters": "for"
+					},
+					"AwAAAMYHAAAAAAAAxwcAAAAAAAAAAAAAxwcAAAAAAADIBwAAAAAAAAAAAADIBwAAAAAAAMkHAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAxgcAAAAAAADGBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					120,
+					1,
+					"run_macro_file",
+					{
+						"file": "res://Packages/Default/Delete Line.sublime-macro"
+					},
+					"AQAAALEHAAAAAAAAsQcAAAAAAAAZAAAAICAgICAgICByZWNvZ25pdGlvbnMuZm9yCg",
+					"AQAAAAAAAAABAAAAyQcAAAAAAADJBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					129,
+					1,
+					"reindent",
+					null,
+					"AQAAALEHAAAAAAAAuQcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAsQcAAAAAAACxBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					131,
+					1,
+					"insert",
+					{
+						"characters": "f"
+					},
+					"AQAAALkHAAAAAAAAugcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAuQcAAAAAAAC5BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					133,
+					1,
+					"insert",
+					{
+						"characters": "or"
+					},
+					"AgAAALoHAAAAAAAAuwcAAAAAAAAAAAAAuwcAAAAAAAC8BwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAugcAAAAAAAC6BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					136,
+					1,
+					"insert_completion",
+					{
+						"completion": "lsp_select_completion {\"index\":3,\"session_name\":\"jdtls\"}",
+						"format": "command",
+						"keep_prefix": true,
+						"must_insert": false,
+						"query_change_id":
+						[
+							75,
+							131,
+							1
+						],
+						"trigger": "for"
+					},
+					"BAAAALsHAAAAAAAAuwcAAAAAAAABAAAAcroHAAAAAAAAugcAAAAAAAABAAAAb7kHAAAAAAAAuQcAAAAAAAABAAAAZrkHAAAAAAAAvAcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvAcAAAAAAAC8BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					139,
+					1,
+					"left_delete",
+					null,
+					"AQAAALsHAAAAAAAAuwcAAAAAAAABAAAAcg",
+					"AQAAAAAAAAABAAAAvAcAAAAAAAC8BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					141,
+					1,
+					"insert",
+					{
+						"characters": "f"
+					},
+					"AQAAALsHAAAAAAAAvAcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAuwcAAAAAAAC7BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					143,
+					1,
+					"left_delete",
+					null,
+					"AQAAALsHAAAAAAAAuwcAAAAAAAABAAAAZg",
+					"AQAAAAAAAAABAAAAvAcAAAAAAAC8BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					144,
+					1,
+					"insert",
+					{
+						"characters": "r"
+					},
+					"AQAAALsHAAAAAAAAvAcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAuwcAAAAAAAC7BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					146,
+					1,
+					"left_delete",
+					null,
+					"AQAAALsHAAAAAAAAuwcAAAAAAAABAAAAcg",
+					"AQAAAAAAAAABAAAAvAcAAAAAAAC8BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					148,
+					1,
+					"insert",
+					{
+						"characters": "r"
+					},
+					"AQAAALsHAAAAAAAAvAcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAuwcAAAAAAAC7BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					154,
+					1,
+					"insert_completion",
+					{
+						"completion": "for ($1 : $2) {\n\t$0\n}",
+						"format": "snippet",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "fore"
+					},
+					"AgAAALkHAAAAAAAAuQcAAAAAAAADAAAAZm9yuQcAAAAAAADbBwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvAcAAAAAAAC8BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					166,
+					1,
+					"paste",
+					null,
+					"AQAAAL8HAAAAAAAAygcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvwcAAAAAAAC/BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					168,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAMoHAAAAAAAAywcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAygcAAAAAAADKBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					170,
+					1,
+					"insert",
+					{
+						"characters": "r"
+					},
+					"AQAAAMsHAAAAAAAAzAcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAywcAAAAAAADLBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					172,
+					1,
+					"insert_completion",
+					{
+						"completion": "lsp_select_completion {\"index\":0,\"session_name\":\"jdtls\"}",
+						"format": "command",
+						"keep_prefix": true,
+						"must_insert": false,
+						"query_change_id":
+						[
+							94,
+							168,
+							1
+						],
+						"trigger": "recognition"
+					},
+					"AgAAAMsHAAAAAAAAywcAAAAAAAABAAAAcssHAAAAAAAA1gcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzAcAAAAAAADMBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					182,
+					1,
+					"paste",
+					null,
+					"AQAAANgHAAAAAAAA5AcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA2AcAAAAAAADYBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					187,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": " \r\n     * ",
+								"range":
+								{
+									"end":
+									{
+										"character": 7,
+										"line": 22
+									},
+									"start":
+									{
+										"character": 6,
+										"line": 22
+									}
+								}
+							},
+							{
+								"newText": " \r\n     * ",
+								"range":
+								{
+									"end":
+									{
+										"character": 7,
+										"line": 31
+									},
+									"start":
+									{
+										"character": 6,
+										"line": 31
+									}
+								}
+							},
+							{
+								"newText": "\r\n     *         ",
+								"range":
+								{
+									"end":
+									{
+										"character": 104,
+										"line": 32
+									},
+									"start":
+									{
+										"character": 103,
+										"line": 32
+									}
+								}
+							},
+							{
+								"newText": " \r\n     * ",
+								"range":
+								{
+									"end":
+									{
+										"character": 7,
+										"line": 41
+									},
+									"start":
+									{
+										"character": 6,
+										"line": 41
+									}
+								}
+							},
+							{
+								"newText": " \r\n     * ",
+								"range":
+								{
+									"end":
+									{
+										"character": 7,
+										"line": 50
+									},
+									"start":
+									{
+										"character": 6,
+										"line": 50
+									}
+								}
+							},
+							{
+								"newText": "\r\n        ",
+								"range":
+								{
+									"end":
+									{
+										"character": 8,
+										"line": 55
+									},
+									"start":
+									{
+										"character": 71,
+										"line": 54
+									}
+								}
+							},
+							{
+								"newText": "",
+								"range":
+								{
+									"end":
+									{
+										"character": 14,
+										"line": 55
+									},
+									"start":
+									{
+										"character": 13,
+										"line": 55
+									}
+								}
+							},
+							{
+								"newText": " ",
+								"range":
+								{
+									"end":
+									{
+										"character": 37,
+										"line": 55
+									},
+									"start":
+									{
+										"character": 37,
+										"line": 55
+									}
+								}
+							},
+							{
+								"newText": "\r\n\r\n        ",
+								"range":
+								{
+									"end":
+									{
+										"character": 8,
+										"line": 57
+									},
+									"start":
+									{
+										"character": 54,
+										"line": 55
+									}
+								}
+							},
+							{
+								"newText": " \r\n     * ",
+								"range":
+								{
+									"end":
+									{
+										"character": 7,
+										"line": 63
+									},
+									"start":
+									{
+										"character": 6,
+										"line": 63
+									}
+								}
+							},
+							{
+								"newText": "\r\n     *         ",
+								"range":
+								{
+									"end":
+									{
+										"character": 104,
+										"line": 63
+									},
+									"start":
+									{
+										"character": 103,
+										"line": 63
+									}
+								}
+							},
+							{
+								"newText": "\r\n",
+								"range":
+								{
+									"end":
+									{
+										"character": 1,
+										"line": 73
+									},
+									"start":
+									{
+										"character": 1,
+										"line": 73
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": null
+					},
+					"DAAAAIYKAAAAAAAAhwoAAAAAAAAAAAAA8wgAAAAAAAADCQAAAAAAAAEAAAAgkggAAAAAAACbCAAAAAAAAAEAAAAg5wcAAAAAAADxBwAAAAAAABYAAAAKICAgICAgICAgICAgCiAgICAgICAg1gcAAAAAAADXBwAAAAAAAAAAAAC+BwAAAAAAAL4HAAAAAAAAAQAAACCwBwAAAAAAALkHAAAAAAAACQAAAAogICAgICAgIKkGAAAAAAAAsgYAAAAAAAABAAAAIKQFAAAAAAAArQUAAAAAAAABAAAAIIoEAAAAAAAAmgQAAAAAAAABAAAAIPQDAAAAAAAA/QMAAAAAAAABAAAAIKoCAAAAAAAAswIAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAA5wcAAAAAAADnBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					192,
+					1,
+					"cut",
+					null,
+					"AQAAACoIAAAAAAAAKggAAAAAAAAvAAAAcmV0dXJuIHJlY29nbml0aW9uUmVwb3NpdG9yeS5zYXZlKHJlY29nbml0aW9uKTs",
+					"AQAAAAAAAAABAAAAKggAAAAAAABZCAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					196,
+					1,
+					"paste",
+					null,
+					"AQAAABcIAAAAAAAARggAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAFwgAAAAAAAAXCAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					202,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": " \r\n     ",
+								"range":
+								{
+									"end":
+									{
+										"character": 5,
+										"line": 23
+									},
+									"start":
+									{
+										"character": 6,
+										"line": 22
+									}
+								}
+							},
+							{
+								"newText": " \r\n     ",
+								"range":
+								{
+									"end":
+									{
+										"character": 5,
+										"line": 33
+									},
+									"start":
+									{
+										"character": 6,
+										"line": 32
+									}
+								}
+							},
+							{
+								"newText": "\r\n     ",
+								"range":
+								{
+									"end":
+									{
+										"character": 5,
+										"line": 35
+									},
+									"start":
+									{
+										"character": 103,
+										"line": 34
+									}
+								}
+							},
+							{
+								"newText": " \r\n     ",
+								"range":
+								{
+									"end":
+									{
+										"character": 5,
+										"line": 45
+									},
+									"start":
+									{
+										"character": 6,
+										"line": 44
+									}
+								}
+							},
+							{
+								"newText": " \r\n     ",
+								"range":
+								{
+									"end":
+									{
+										"character": 5,
+										"line": 55
+									},
+									"start":
+									{
+										"character": 6,
+										"line": 54
+									}
+								}
+							},
+							{
+								"newText": "\r\n        ",
+								"range":
+								{
+									"end":
+									{
+										"character": 8,
+										"line": 60
+									},
+									"start":
+									{
+										"character": 71,
+										"line": 59
+									}
+								}
+							},
+							{
+								"newText": "\r\n            ",
+								"range":
+								{
+									"end":
+									{
+										"character": 0,
+										"line": 61
+									},
+									"start":
+									{
+										"character": 54,
+										"line": 60
+									}
+								}
+							},
+							{
+								"newText": "\r\n        ",
+								"range":
+								{
+									"end":
+									{
+										"character": 8,
+										"line": 62
+									},
+									"start":
+									{
+										"character": 47,
+										"line": 61
+									}
+								}
+							},
+							{
+								"newText": "\r\n\r\n    ",
+								"range":
+								{
+									"end":
+									{
+										"character": 4,
+										"line": 64
+									},
+									"start":
+									{
+										"character": 9,
+										"line": 62
+									}
+								}
+							},
+							{
+								"newText": " \r\n     ",
+								"range":
+								{
+									"end":
+									{
+										"character": 5,
+										"line": 69
+									},
+									"start":
+									{
+										"character": 6,
+										"line": 68
+									}
+								}
+							},
+							{
+								"newText": "\r\n     ",
+								"range":
+								{
+									"end":
+									{
+										"character": 5,
+										"line": 70
+									},
+									"start":
+									{
+										"character": 103,
+										"line": 69
+									}
+								}
+							},
+							{
+								"newText": "\r\n",
+								"range":
+								{
+									"end":
+									{
+										"character": 0,
+										"line": 81
+									},
+									"start":
+									{
+										"character": 1,
+										"line": 80
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": null
+					},
+					"DAAAAMAKAAAAAAAAwQoAAAAAAAABAAAACh4JAAAAAAAAJAkAAAAAAAAGAAAACiAgICAgtQgAAAAAAAC8CAAAAAAAAAcAAAAgCiAgICAgUAgAAAAAAABWCAAAAAAAAA4AAAAKICAgICAgICAKICAgIEYIAAAAAAAATwgAAAAAAAAJAAAACiAgICAgICAgFggAAAAAAAAjCAAAAAAAAAEAAAAK3wcAAAAAAADoBwAAAAAAAAkAAAAKICAgICAgICDQBgAAAAAAANcGAAAAAAAABwAAACAKICAgICDDBQAAAAAAAMoFAAAAAAAABwAAACAKICAgICCaBAAAAAAAAKAEAAAAAAAABgAAAAogICAgIPwDAAAAAAAAAwQAAAAAAAAHAAAAIAogICAgIKoCAAAAAAAAsQIAAAAAAAAHAAAAIAogICAgIA",
+					"AQAAAAAAAAABAAAARggAAAAAAABGCAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					226,
+					1,
+					"insert",
+					{
+						"characters": "v"
+					},
+					"AgAAAKMHAAAAAAAApAcAAAAAAAAAAAAApAcAAAAAAACkBwAAAAAAAAsAAABSZWNvZ25pdGlvbg",
+					"AQAAAAAAAAABAAAAowcAAAAAAACuBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					229,
+					1,
+					"insert",
+					{
+						"characters": "oid"
+					},
+					"AwAAAKQHAAAAAAAApQcAAAAAAAAAAAAApQcAAAAAAACmBwAAAAAAAAAAAACmBwAAAAAAAKcHAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAApAcAAAAAAACkBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					230,
+					1,
+					"insert_completion",
+					{
+						"completion": "lsp_select_completion {\"index\":0,\"session_name\":\"jdtls\"}",
+						"format": "command",
+						"keep_prefix": true,
+						"must_insert": false,
+						"query_change_id":
+						[
+							127,
+							229,
+							1
+						],
+						"trigger": "void"
+					},
+					"BAAAAKYHAAAAAAAApgcAAAAAAAABAAAAZKUHAAAAAAAApQcAAAAAAAABAAAAaaMHAAAAAAAAowcAAAAAAAACAAAAdm+jBwAAAAAAAKcHAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAApwcAAAAAAACnBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					244,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AwAAANgHAAAAAAAA2QcAAAAAAAAAAAAA2QcAAAAAAADdBwAAAAAAAAAAAADdBwAAAAAAAOEHAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA2AcAAAAAAADYBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					263,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AwAAACUIAAAAAAAAJggAAAAAAAAAAAAAJggAAAAAAAAmCAAAAAAAAAYAAAByZXR1cm7ZBwAAAAAAANkHAAAAAAAACAAAACAgICAgICAg",
+					"AQAAAAAAAAABAAAAJQgAAAAAAAArCAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					269,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": "\r\n            ",
+								"range":
+								{
+									"end":
+									{
+										"character": 14,
+										"line": 62
+									},
+									"start":
+									{
+										"character": 54,
+										"line": 61
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": null
+					},
+					"AQAAABAIAAAAAAAAHQgAAAAAAAAPAAAACiAgICAgICAgICAgICAg",
+					"AQAAAAAAAAABAAAARwgAAAAAAABHCAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "src/main/java/com/amadeuscam/perfumir_api/entities/Recognition.java",
+			"settings":
+			{
+				"buffer_size": 1189,
+				"line_ending": "Windows"
+			},
+			"undo_stack":
+			[
+			]
+		},
+		{
+			"file": "eclipse-java-google-style.xml",
+			"settings":
+			{
+				"buffer_size": 36001,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			},
+			"undo_stack":
+			[
+				[
+					9,
+					1,
+					"insert",
+					{
+						"characters": "FAS"
+					},
+					"BAAAAG0bAAAAAAAAbhsAAAAAAAAAAAAAbhsAAAAAAABuGwAAAAAAAAQAAAB0cnVlbhsAAAAAAABvGwAAAAAAAAAAAABvGwAAAAAAAHAbAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABtGwAAAAAAAHEbAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					10,
+					1,
+					"insert_completion",
+					{
+						"completion": "false",
+						"format": "text",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "false"
+					},
+					"AgAAAG0bAAAAAAAAbRsAAAAAAAADAAAARkFTbRsAAAAAAAByGwAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABwGwAAAAAAAHAbAAAAAAAAAAAAAAAA8L8"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Anaconda Python Builder",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"jdtl",
+				"LSP-jdtls: Refresh Workspace"
+			],
+			[
+				"enabler",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"terminus",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"jdt",
+				"LSP-jdtls: Build Workspace"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"d",
+				"Debugger: Start (no debug)"
+			],
+			[
+				"ter",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"debugger",
+				"Debugger: Add Configuration"
+			],
+			[
+				"de",
+				"Debugger: Edit Configurations"
+			],
+			[
+				"openai",
+				"OpenAI: New Message"
+			],
+			[
+				"ope",
+				"OpenAI: Reset Chat History"
+			],
+			[
+				"open",
+				"OpenAI: Chat Model Select With Sheets"
+			],
+			[
+				"install",
+				"Debugger: Install Adapters"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"terminus sele",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"ACTIVA",
+				"ayu: Activate theme"
+			],
+			[
+				"INST",
+				"Package Control: Install Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"terminus ope",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"termin",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"opena",
+				"OpenAI: New Message"
+			],
+			[
+				"MarkdownEditing",
+				"MarkdownEditing: New Footnote"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"ollama",
+				"Ollama: Query Selected Text"
+			],
+			[
+				"PackageResourceViewer",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: re",
+				"Package Control: Remove Package"
+			],
+			[
+				"y",
+				"Yollama: Ask about file or selection"
+			],
+			[
+				"Package Control: rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"yo",
+				"Yollama: Ask about file or selection"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"git ",
+				"Set Syntax: Git Code Owners"
+			],
+			[
+				"Git Line Info",
+				"Plugin Development: Profile Events"
+			],
+			[
+				"Package Control: remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"materialize",
+				"Activate Materialize Theme"
+			],
+			[
+				"",
+				"Activate Materialize Theme"
+			],
+			[
+				"mono",
+				"Monokai Pro: select theme"
+			],
+			[
+				"lsp-",
+				"Preferences: LSP-jdtls Settings"
+			],
+			[
+				"lsp",
+				"LSP: Troubleshoot Server"
+			],
+			[
+				"LSP-",
+				"LSP-jdtls: Clear data"
+			],
+			[
+				"LSP",
+				"Preferences: LSP-jdtls Settings"
+			],
+			[
+				"LSP-D",
+				"Preferences: LSP-jdtls Settings"
+			],
+			[
+				"enable",
+				"LSP: Enable Language Server Globally"
+			],
+			[
+				"add",
+				"Package Control: Add Repository"
+			],
+			[
+				"toggle",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"forma",
+				"Formatter: Beautify With Prettier"
+			],
+			[
+				"ht",
+				"HTMLBeautify"
+			],
+			[
+				"html",
+				"HTMLBeautify"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 258.0,
+		"history":
+		[
+			"pip",
+			"import subprocess; subprocess.run([\"pip\", \"install\", \"--target\", sublime.packages_path() + \"/User\", \"pexpect\"])\n",
+			"pip install pexpect",
+			"import subprocess; subprocess.run([\"pip\", \"install\", \"--target\", sublime.packages_path() + \"/User\", \"pexpect\"])\n",
+			"import subprocess; subprocess.run([\"pip\", \"install\", \"--target\", sublime.packages_path() + \"/User\", \"chardet\"])\n",
+			"import subprocess; subprocess.run([\"pip\", \"install\", \"--target\", sublime.packages_path() + \"/User\", \"idna\"])\n",
+			"import subprocess; subprocess.run([\"pip\", \"install\", \"--target\", sublime.packages_path() + \"/User\", \"urllib3\"])\n",
+			"import subprocess; subprocess.run([\"pip\", \"install\", \"--target\", sublime.packages_path() + \"/User\", \"gitpython\"])\n",
+			"import subprocess; subprocess.run([\"pip\", \"install\", \"--target\", sublime.packages_path()",
+			"import subprocess; subprocess.run([\"pip\", \"install\", \"--target\", sublime.packages_path() + \"/User\", \"gitpython\"])\n",
+			"import sys; print(sys.path)",
+			"import subprocess; subprocess.run([\"pip\", \"install\", \"--target\", sublime.packages_path() + \"/User\", \"gitpython\"])\n",
+			"view.run_command(\"git_commit_info\")",
+			"view.run_command(\"git_blame_popup\")",
+			"view.run_command(\"git_commit_info\")",
+			"view.set_status(\"git_blame\", \"\")",
+			"view.run_command(\"show_git_author_popup\")",
+			"sublime_plugin.reload_plugin('User.git_author_plugin')",
+			"window.run_command(\"toggle_menu\")",
+			"sublime.set_menu_visible(True)",
+			"sublime_plugin.reload_plugin('IntegratedTerminal')\n",
+			"sublime_plugin.reload_plugin('IntegratedTerminal')",
+			"view.run_command('example')",
+			"ExampleCommand.run",
+			"example_command",
+			"ExampleCommand",
+			"example_three_command",
+			"ExampleThreeCommand",
+			"view.file_name()",
+			"jsbeautify"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/amade/Documents/perfumir_api_java",
+		"/C/Users/amade/Documents/perfumir_api_java/src",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/controllers",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/entities",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/services",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/services/impl"
+	],
+	"file_history":
+	[
+		"/C/Users/amade/Documents/perfumir_api_java/perfumir.sublime-project",
+		"/C/Users/amade/Documents/perfumir-front/src/views/Recognition.vue",
+		"/C/Users/amade/Documents/perfumir-front/perfumir.sublime-project",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/services/impl/RecognitionServiceImpl.java",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/services/impl/FormulaManagementSerrviceImpl.java",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/entities/FormulaManagement.java",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/services/impl/UserServiceImpl.java",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/entities/Recognition.java",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/services/impl/AuthenticationServiceImpl.java",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/services/impl/ProjectServiceImpl.java",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/services/impl/DilutionServiceImpl.java",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/services/impl/FormulaServiceImpl.java",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/services/impl/OlfativeFamiliesServiceImpl.java",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/services/OlfativeFamiliesService.java",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/services/FormulaService.java",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/dto/SignUpRequest.java",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/repository/UserRepository.java",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/services/JWTService.java",
+		"/C/Users/amade/Documents/perfumir-front/src/components/projects/FormulaView.vue",
+		"/C/Users/amade/Documents/perfumir-front/src/App.vue",
+		"/C/Users/amade/Documents/perfumir-front/src/components/Home.vue",
+		"/C/Users/amade/Documents/perfumir-front/src/components/projects/Formula.vue",
+		"/C/Users/amade/Documents/perfumir_api_java/docker-compose.dev.yaml",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/resources/application-dev.properties",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/User/Python.sublime-build",
+		"/C/Users/amade/Documents/perfumir_api_java/changelog.md",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/entities/Formula.java",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/resources/application.properties",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/services/impl/FormulaIngredientServiceImpl.java",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/repository/FormulaManagementRepository.java",
+		"/C/Users/amade/Downloads/drive-download-20241203T195426Z-001/application.properties",
+		"/C/Users/amade/Downloads/drive-download-20241203T195426Z-001/application-dev.properties",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/entities/FormulaIngredient.java",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/Python/Python.sublime-build",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/User/Yollama.sublime-settings",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/User/GitGutter.sublime-settings",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/GitGutter/GitGutter.sublime-settings",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/dto/ProjectDto.java",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/config/OpenAPIConfig.java",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/config/SecurityConfiguration.java",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/User/git_commit_info.py",
+		"/C/Users/amade/Documents/llms/qwen-32/MODELFILE",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/services/impl/IngredientServiceImpl.java",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/services/impl/JWTServiceImpl.java",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/controllers/FormulaIngredientController.java",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/User/openAI.sublime-settings",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/OpenAI completion/openAI.sublime-settings",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/controllers/CommentController.java",
+		"/C/Users/amade/Documents/curso_python/data_class/main.py",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/IntegratedTerminal/IntegratedTerminal.py",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/controllers/IngredientController.java",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/User/SpringBoot.sublime-build",
+		"/C/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/PerfumirApiApplication.java",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/Terminus/themes/spring.json",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/User/LSP-jdtls.sublime-settings",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/LSP-jdtls/LSP-jdtls.sublime-settings",
+		"/C/Users/amade/Downloads/demo/src/main/java/com/amadeusca/demo/DemoApplication.java",
+		"/C/Users/amade/Documents/oasis/src/main/java/com/amadeuscam/oasis/OasisApplication.java",
+		"/C/Users/amade/Documents/python/oop/ex.py",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/HTMLBeautify/HTMLBeautify.sublime-settings",
+		"/C/Users/amade/Documents/test.html",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/User/HTMLBeautify.sublime-settings",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/JsFormat/JsFormat.sublime-settings",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/JsPrettier/messages/install.txt",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/Javascript Beautify/Default (Windows).sublime-keymap",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/JsFormat/Default (Windows).sublime-keymap",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/Javascript Beautify/JavascriptBeautify.sublime-settings",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc.defaults.json",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/User/.jsbeautifyrc.json",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/User/.jsbeautifyrc",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/Default (Windows).sublime-keymap",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/amade/AppData/Roaming/Sublime Text 3/Packages/EsFormatter/Default (Windows).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 164.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"}\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/main/java/com/amadeuscam/perfumir_api/controllers/RecognitionController.java",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2171,
+						"regions":
+						{
+							"_rb_l0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										846,
+										847
+									],
+									[
+										869,
+										870
+									],
+									[
+										906,
+										907
+									],
+									[
+										2169,
+										2170
+									]
+								],
+								"scope": "l0._rb"
+							},
+							"_rb_l1":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										1222,
+										1223
+									],
+									[
+										1226,
+										1227
+									],
+									[
+										1279,
+										1280
+									],
+									[
+										1280,
+										1281
+									],
+									[
+										1282,
+										1283
+									],
+									[
+										1363,
+										1364
+									],
+									[
+										1444,
+										1445
+									],
+									[
+										1454,
+										1455
+									],
+									[
+										1510,
+										1511
+									],
+									[
+										1539,
+										1540
+									],
+									[
+										1541,
+										1542
+									],
+									[
+										1632,
+										1633
+									],
+									[
+										1707,
+										1708
+									],
+									[
+										1711,
+										1712
+									],
+									[
+										1748,
+										1749
+									],
+									[
+										1792,
+										1793
+									],
+									[
+										1794,
+										1795
+									],
+									[
+										1914,
+										1915
+									],
+									[
+										1986,
+										1987
+									],
+									[
+										1994,
+										1995
+									],
+									[
+										2034,
+										2035
+									],
+									[
+										2056,
+										2057
+									],
+									[
+										2058,
+										2059
+									],
+									[
+										2166,
+										2167
+									]
+								],
+								"scope": "l1._rb"
+							},
+							"_rb_l2":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										1316,
+										1317
+									],
+									[
+										1356,
+										1357
+									],
+									[
+										1575,
+										1576
+									],
+									[
+										1625,
+										1626
+									],
+									[
+										1837,
+										1838
+									],
+									[
+										1850,
+										1851
+									],
+									[
+										1888,
+										1889
+									],
+									[
+										1907,
+										1908
+									],
+									[
+										2105,
+										2106
+									],
+									[
+										2108,
+										2109
+									],
+									[
+										2150,
+										2151
+									],
+									[
+										2151,
+										2152
+									],
+									[
+										2158,
+										2159
+									],
+									[
+										2159,
+										2160
+									]
+								],
+								"scope": "l2._rb"
+							},
+							"_rb_l3":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										1354,
+										1355
+									],
+									[
+										1355,
+										1356
+									],
+									[
+										1619,
+										1620
+									],
+									[
+										1624,
+										1625
+									]
+								],
+								"scope": "l3._rb"
+							}
+						},
+						"selection":
+						[
+							[
+								1852,
+								1852
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": ".@#* ",
+									"registration_id": "a7bbbf34-9937-4392-9573-a598250ff05d",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "jdtls"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										1914,
+										1915
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										1794,
+										1795
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"git_gutter_is_enabled": true,
+							"lsp_active": true,
+							"lsp_uri": "file:///C:/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/controllers/RecognitionController.java",
+							"show_definitions": false,
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 504.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/main/java/com/amadeuscam/perfumir_api/controllers/ProjectController.java",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3056,
+						"regions":
+						{
+							"_rb_l0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										1016,
+										1017
+									],
+									[
+										1035,
+										1036
+									],
+									[
+										1093,
+										1094
+									],
+									[
+										3054,
+										3055
+									]
+								],
+								"scope": "l0._rb"
+							},
+							"_rb_l1":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										1249,
+										1250
+									],
+									[
+										1250,
+										1251
+									],
+									[
+										1252,
+										1253
+									],
+									[
+										1426,
+										1427
+									],
+									[
+										1495,
+										1496
+									],
+									[
+										1530,
+										1531
+									],
+									[
+										1532,
+										1533
+									],
+									[
+										1773,
+										1774
+									],
+									[
+										1843,
+										1844
+									],
+									[
+										1878,
+										1879
+									],
+									[
+										1880,
+										1881
+									],
+									[
+										2258,
+										2259
+									],
+									[
+										2276,
+										2277
+									],
+									[
+										2291,
+										2292
+									],
+									[
+										2341,
+										2342
+									],
+									[
+										2369,
+										2370
+									],
+									[
+										2371,
+										2372
+									],
+									[
+										2706,
+										2707
+									],
+									[
+										2727,
+										2728
+									],
+									[
+										2742,
+										2743
+									],
+									[
+										2795,
+										2796
+									],
+									[
+										2817,
+										2818
+									],
+									[
+										2819,
+										2820
+									],
+									[
+										3051,
+										3052
+									]
+								],
+								"scope": "l1._rb"
+							},
+							"_rb_l2":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										1326,
+										1327
+									],
+									[
+										1327,
+										1328
+									],
+									[
+										1363,
+										1364
+									],
+									[
+										1364,
+										1365
+									],
+									[
+										1369,
+										1370
+									],
+									[
+										1390,
+										1391
+									],
+									[
+										1399,
+										1400
+									],
+									[
+										1419,
+										1420
+									],
+									[
+										1587,
+										1588
+									],
+									[
+										1598,
+										1599
+									],
+									[
+										1666,
+										1667
+									],
+									[
+										1674,
+										1675
+									],
+									[
+										1712,
+										1713
+									],
+									[
+										1766,
+										1767
+									],
+									[
+										1935,
+										1936
+									],
+									[
+										1946,
+										1947
+									],
+									[
+										1960,
+										1961
+									],
+									[
+										2009,
+										2010
+									],
+									[
+										2011,
+										2012
+									],
+									[
+										2084,
+										2085
+									],
+									[
+										2151,
+										2152
+									],
+									[
+										2159,
+										2160
+									],
+									[
+										2197,
+										2198
+									],
+									[
+										2251,
+										2252
+									],
+									[
+										2355,
+										2356
+									],
+									[
+										2360,
+										2361
+									],
+									[
+										2446,
+										2447
+									],
+									[
+										2449,
+										2450
+									],
+									[
+										2485,
+										2486
+									],
+									[
+										2648,
+										2649
+									],
+									[
+										2656,
+										2657
+									],
+									[
+										2699,
+										2700
+									],
+									[
+										2832,
+										2833
+									],
+									[
+										2868,
+										2869
+									],
+									[
+										2870,
+										2871
+									],
+									[
+										2943,
+										2944
+									],
+									[
+										2981,
+										2982
+									],
+									[
+										2984,
+										2985
+									],
+									[
+										3022,
+										3023
+									],
+									[
+										3044,
+										3045
+									]
+								],
+								"scope": "l2._rb"
+							},
+							"_rb_l3":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										1417,
+										1418
+									],
+									[
+										1418,
+										1419
+									],
+									[
+										1732,
+										1733
+									],
+									[
+										1745,
+										1746
+									],
+									[
+										1992,
+										1993
+									],
+									[
+										2008,
+										2009
+									],
+									[
+										2052,
+										2053
+									],
+									[
+										2073,
+										2074
+									],
+									[
+										2217,
+										2218
+									],
+									[
+										2230,
+										2231
+									],
+									[
+										2497,
+										2498
+									],
+									[
+										2647,
+										2648
+									],
+									[
+										2677,
+										2678
+									],
+									[
+										2698,
+										2699
+									],
+									[
+										2864,
+										2865
+									],
+									[
+										2867,
+										2868
+									],
+									[
+										2911,
+										2912
+									],
+									[
+										2932,
+										2933
+									]
+								],
+								"scope": "l3._rb"
+							},
+							"_rb_l4":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										2006,
+										2007
+									],
+									[
+										2007,
+										2008
+									],
+									[
+										2560,
+										2561
+									],
+									[
+										2568,
+										2569
+									],
+									[
+										2610,
+										2611
+									],
+									[
+										2636,
+										2637
+									]
+								],
+								"scope": "l4._rb"
+							}
+						},
+						"selection":
+						[
+							[
+								2678,
+								2688
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": ".@#* ",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "jdtls"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										2698,
+										2699
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"region.yellowish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										2677,
+										2678
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"git_gutter_is_enabled": true,
+							"lsp_active": true,
+							"lsp_uri": "file:///C:/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/controllers/ProjectController.java",
+							"show_definitions": false,
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 756.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/main/java/com/amadeuscam/perfumir_api/services/RecognitionService.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 498,
+						"regions":
+						{
+							"_rb_l0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										215,
+										216
+									],
+									[
+										496,
+										497
+									]
+								],
+								"scope": "l0._rb"
+							},
+							"_rb_l1":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										258,
+										259
+									],
+									[
+										259,
+										260
+									],
+									[
+										309,
+										310
+									],
+									[
+										324,
+										325
+									],
+									[
+										355,
+										356
+									],
+									[
+										363,
+										364
+									],
+									[
+										390,
+										391
+									],
+									[
+										421,
+										422
+									],
+									[
+										491,
+										492
+									],
+									[
+										492,
+										493
+									]
+								],
+								"scope": "l1._rb"
+							}
+						},
+						"selection":
+						[
+							[
+								376,
+								376
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": ".@#* ",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "jdtls"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										496,
+										497
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										215,
+										216
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"git_gutter_is_enabled": true,
+							"lsp_active": true,
+							"lsp_uri": "file:///C:/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/services/RecognitionService.java",
+							"show_definitions": false,
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 52.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/main/java/com/amadeuscam/perfumir_api/services/impl/RecognitionServiceImpl.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2744,
+						"regions":
+						{
+							"_rb_l0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										539,
+										540
+									],
+									[
+										2742,
+										2743
+									]
+								],
+								"scope": "l0._rb"
+							},
+							"_rb_l1":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										844,
+										845
+									],
+									[
+										845,
+										846
+									],
+									[
+										847,
+										848
+									],
+									[
+										901,
+										902
+									],
+									[
+										1288,
+										1289
+									],
+									[
+										1303,
+										1304
+									],
+									[
+										1305,
+										1306
+									],
+									[
+										1377,
+										1378
+									],
+									[
+										1601,
+										1602
+									],
+									[
+										1609,
+										1610
+									],
+									[
+										1611,
+										1612
+									],
+									[
+										1663,
+										1664
+									],
+									[
+										1974,
+										1975
+									],
+									[
+										2005,
+										2006
+									],
+									[
+										2007,
+										2008
+									],
+									[
+										2133,
+										2134
+									],
+									[
+										2430,
+										2431
+									],
+									[
+										2431,
+										2432
+									],
+									[
+										2433,
+										2434
+									],
+									[
+										2740,
+										2741
+									]
+								],
+								"scope": "l1._rb"
+							},
+							"_rb_l2":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										893,
+										894
+									],
+									[
+										894,
+										895
+									],
+									[
+										1365,
+										1366
+									],
+									[
+										1370,
+										1371
+									],
+									[
+										1653,
+										1654
+									],
+									[
+										1656,
+										1657
+									],
+									[
+										2022,
+										2023
+									],
+									[
+										2061,
+										2062
+									],
+									[
+										2063,
+										2064
+									],
+									[
+										2126,
+										2127
+									],
+									[
+										2564,
+										2565
+									],
+									[
+										2565,
+										2566
+									],
+									[
+										2659,
+										2660
+									],
+									[
+										2660,
+										2661
+									],
+									[
+										2686,
+										2687
+									],
+									[
+										2733,
+										2734
+									]
+								],
+								"scope": "l2._rb"
+							},
+							"_rb_l3":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										2103,
+										2104
+									],
+									[
+										2115,
+										2116
+									],
+									[
+										2708,
+										2709
+									],
+									[
+										2732,
+										2733
+									]
+								],
+								"scope": "l3._rb"
+							}
+						},
+						"selection":
+						[
+							[
+								2134,
+								2134
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": ".@#* ",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "jdtls"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										2133,
+										2134
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										2007,
+										2008
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"git_gutter_is_enabled": true,
+							"lsp_active": true,
+							"lsp_uri": "file:///C:/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/services/impl/RecognitionServiceImpl.java",
+							"show_definitions": false,
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1092.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/main/java/com/amadeuscam/perfumir_api/entities/Recognition.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1189,
+						"regions":
+						{
+							"_rb_l0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										613,
+										614
+									],
+									[
+										634,
+										635
+									],
+									[
+										661,
+										662
+									],
+									[
+										1187,
+										1188
+									]
+								],
+								"scope": "l0._rb"
+							},
+							"_rb_l1":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										690,
+										691
+									],
+									[
+										721,
+										722
+									],
+									[
+										820,
+										821
+									],
+									[
+										874,
+										875
+									],
+									[
+										1013,
+										1014
+									],
+									[
+										1039,
+										1040
+									],
+									[
+										1088,
+										1089
+									],
+									[
+										1114,
+										1115
+									]
+								],
+								"scope": "l1._rb"
+							}
+						},
+						"selection":
+						[
+							[
+								649,
+								649
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": ".@#* ",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "jdtls"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"git_gutter_is_enabled": true,
+							"lsp_active": true,
+							"lsp_uri": "file:///C:/Users/amade/Documents/perfumir_api_java/src/main/java/com/amadeuscam/perfumir_api/entities/Recognition.java",
+							"show_definitions": false,
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 199.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "eclipse-java-google-style.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 36001,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6566,
+								6566
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										6599,
+										6600
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/double_quote.png",
+										"region.greenish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										6508,
+										6509
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"git_gutter_is_enabled": true,
+							"lsp_uri": "file:///C:/Users/amade/Documents/perfumir_api_java/eclipse-java-google-style.xml",
+							"syntax": "Packages/XML/XML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 986.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 69.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.AI Chat":
+	{
+		"height": 323.0
+	},
+	"output.Build Panel":
+	{
+		"height": 279.0
+	},
+	"output.Debugger":
+	{
+		"height": 348.0
+	},
+	"output.Debugger Console":
+	{
+		"height": 339.0
+	},
+	"output.LSP Log Panel":
+	{
+		"height": 278.0
+	},
+	"output.Terminus":
+	{
+		"height": 215.0
+	},
+	"output.Terminus 1":
+	{
+		"height": 240.0
+	},
+	"output.Terminus 2":
+	{
+		"height": 274.0
+	},
+	"output.diagnostics":
+	{
+		"height": 138.0
+	},
+	"output.exec":
+	{
+		"height": 322.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git_line_details":
+	{
+		"height": 156.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups-dummy":
+	{
+		"height": 0.0
+	},
+	"output.ollama_result":
+	{
+		"height": 250.0
+	},
+	"output.yollama":
+	{
+		"height": 553.0
+	},
+	"pinned_build_system": "Packages/User/SpringBoot.sublime-build",
+	"project": "perfumir.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"lsp_show_inlay_hints": true
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 424.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
